@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Documento de trabajo interno: anteproyecto de mecánica automotriz a domicilio.">
+<title>Ficha del vehículo · Anteproyecto v2 · Mecánica a domicilio</title>
+<link rel="stylesheet" href="assets/estilos.css">
+<script src="assets/menu.js"></script>
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<div class="barra-superior">
+  <p class="aviso-fijo" role="note"><strong>Documento de trabajo.</strong> No es una oferta comercial ni un acuerdo societario.</p>
+  <header class="cabecera">
+    <a class="marca" href="index.html"><span class="marca-sigla" aria-hidden="true">v2</span><span>Anteproyecto<br>Mecánica a domicilio</span></a>
+    <button class="boton-menu" type="button" aria-expanded="false" aria-controls="menu">Menú</button>
+  </header>
+  <nav id="menu" class="menu" aria-label="Secciones del documento">
+    <ol>
+      <li><a href="index.html"><span class="num">1</span><span>Inicio</span></a></li>
+      <li><a href="equipo.html"><span class="num">2</span><span>Equipo</span></a></li>
+      <li><a href="clientes.html"><span class="num">3</span><span>Clientes e ingresos</span></a></li>
+      <li><a href="servicios.html"><span class="num">4</span><span>Servicios</span></a></li>
+      <li><a href="experiencia.html"><span class="num">5</span><span>Experiencia del cliente</span></a></li>
+      <li><a href="ficha.html" aria-current="page"><span class="num">6</span><span>Ficha del vehículo</span></a></li>
+      <li><a href="informe.html"><span class="num">7</span><span>Informe para el cliente</span></a></li>
+      <li><a href="sistemas.html"><span class="num">8</span><span>Sistemas propuestos</span></a></li>
+      <li><a href="plan.html"><span class="num">9</span><span>Plan por etapas</span></a></li>
+      <li><a href="riesgos.html"><span class="num">10</span><span>Riesgos</span></a></li>
+      <li><a href="reunion.html"><span class="num">11</span><span>Reunión del 15</span></a></li>
+      <li><a href="pendientes.html"><span class="num">12</span><span>Pendientes y preguntas</span></a></li>
+      <li><a href="anexo.html"><span class="num">A</span><span>Anexo</span></a></li>
+    </ol>
+  </nav>
+</div>
+<main id="contenido">
+<p class="migas">Sección 6 de 12</p>
+<h1>Ficha del vehículo</h1>
+<p class="bajada">Ficha digital maestra: herramienta central del proyecto.</p>
+<div class="alerta" role="note"><span class="alerta-titulo">Por definir</span><p>Su estructura completa (campos, tipos, validaciones y accesos) se presenta como módulo aparte. Aquí solo se resumen los bloques de información.</p></div>
+
+<h2>Bloques de la ficha</h2>
+<div class="tarjeta">
+<h3>1. Identificación</h3>
+<ul class="chips"><li>Marca</li><li>Modelo</li><li>Año</li><li>Versión</li><li>Patente</li><li>VIN cuando corresponda</li><li>Motor</li><li>Combustible</li><li>Kilometraje</li><li>Fecha de ingreso al sistema</li></ul>
+</div>
+<div class="tarjeta">
+<h3>2. Especificaciones validadas por Gustavo</h3>
+<ul class="chips"><li>Tipo y cantidad de aceite</li><li>Filtros compatibles</li><li>Otras referencias según manual del fabricante</li></ul>
+</div>
+<div class="tarjeta">
+<h3>3. Historial de intervenciones</h3>
+<ul class="chips"><li>Número de OT</li><li>Fecha</li><li>Kilometraje</li><li>Servicio</li><li>Evaluación previa</li><li>Trabajo ejecutado</li><li>Repuestos con marca y especificación</li><li>Proveedor</li><li>Fotos</li><li>Técnico responsable</li><li>Observaciones</li><li>Informe entregado</li><li>Estado</li></ul>
+</div>
+<div class="tarjeta">
+<h3>4. Seguimiento preventivo</h3>
+<ul class="chips"><li>Próximas mantenciones por fecha o kilometraje</li><li>Recomendaciones pendientes</li><li>Trabajos repetidos</li></ul>
+<p>Los intervalos salen de las especificaciones del fabricante y las condiciones de uso; <strong>no se usan intervalos universales</strong>.</p>
+</div>
+
+<h2>Vehículo y propietario van separados</h2>
+<p>El vehículo existe una sola vez en el sistema. El cliente se vincula a él mediante una <strong>tenencia</strong> (propietario, conductor o flota, con fecha de inicio y término).</p>
+
+<figure class="figura">
+<svg viewBox="0 0 320 380" role="img" aria-labelledby="svg-t svg-d" xmlns="http://www.w3.org/2000/svg">
+<title id="svg-t">Vehículo y propietario van separados</title>
+<desc id="svg-d">Dos clientes, CLI-0001 (propietario anterior) y CLI-0002 (propietario actual), se vinculan al mismo vehículo VEH-0001 mediante una tenencia cada uno, con fecha de inicio y término. El vehículo existe una sola vez y tiene un único historial técnico de órdenes de trabajo. Datos ficticios.</desc>
+<rect class="svg-caja" x="6" y="8" width="146" height="54" rx="4"/>
+<text class="svg-tit" x="79" y="31" text-anchor="middle">CLI-0001</text>
+<text class="svg-txt" x="79" y="49" text-anchor="middle">Propietario anterior</text>
+<rect class="svg-caja" x="168" y="8" width="146" height="54" rx="4"/>
+<text class="svg-tit" x="241" y="31" text-anchor="middle">CLI-0002</text>
+<text class="svg-txt" x="241" y="49" text-anchor="middle">Propietario actual</text>
+<line class="svg-linea" x1="79" y1="62" x2="79" y2="98"/>
+<line class="svg-linea" x1="241" y1="62" x2="241" y2="98"/>
+<rect class="svg-caja" x="6" y="98" width="146" height="66" rx="4"/>
+<text class="svg-tit" x="79" y="120" text-anchor="middle">TENENCIA</text>
+<text class="svg-txt" x="79" y="138" text-anchor="middle">Propietario</text>
+<text class="svg-txt" x="79" y="154" text-anchor="middle">inicio → término</text>
+<rect class="svg-caja" x="168" y="98" width="146" height="66" rx="4"/>
+<text class="svg-tit" x="241" y="120" text-anchor="middle">TENENCIA</text>
+<text class="svg-txt" x="241" y="138" text-anchor="middle">Propietario</text>
+<text class="svg-txt" x="241" y="154" text-anchor="middle">inicio → (vigente)</text>
+<path class="svg-linea" d="M79 164 V184 H160 V204"/>
+<path class="svg-linea" d="M241 164 V184 H160"/>
+<rect class="svg-caja-mor" x="50" y="204" width="220" height="60" rx="4"/>
+<text class="svg-tit" x="160" y="228" text-anchor="middle">VEH-0001</text>
+<text class="svg-txt" x="160" y="248" text-anchor="middle">Existe una sola vez en el sistema</text>
+<line class="svg-linea" x1="160" y1="264" x2="160" y2="296"/>
+<rect class="svg-caja" x="50" y="296" width="220" height="74" rx="4"/>
+<text class="svg-tit" x="160" y="320" text-anchor="middle">HISTORIAL TÉCNICO</text>
+<text class="svg-txt" x="160" y="340" text-anchor="middle">OT-0001, OT-0002…</text>
+<text class="svg-txt" x="160" y="357" text-anchor="middle">(sin datos personales)</text>
+</svg>
+<figcaption>Esquema con datos ficticios. Tenencia: propietario, conductor o flota, con fecha de inicio y término.</figcaption>
+</figure>
+
+<div class="tarjeta"><ul><li>No se duplican vehículos ni clientes.</li><li>Si el auto cambia de dueño, el nuevo propietario solo ve el historial técnico si el anterior lo autorizó, y nunca ve sus datos personales.</li></ul></div>
+<div class="alerta" role="note"><span class="alerta-titulo">Verificar</span><p>Este criterio debe revisarse con abogado según la Ley 21.719 (ver Asuntos legales en el <a href="anexo.html#legal">Anexo</a>).</p></div>
+<p>En documentos internos se usan identificadores (por ejemplo, <code>CLI-0001</code>, <code>VEH-0001</code>, <code>OT-0001</code>), no nombres de clientes.</p>
+</main>
+<nav class="paginacion" aria-label="Página anterior y siguiente">
+  <a class="ant" href="experiencia.html" rel="prev"><small>← Anterior</small>Experiencia del cliente</a>
+  <a class="sig" href="informe.html" rel="next"><small>Siguiente →</small>Informe para el cliente</a>
+</nav>
+<footer class="pie">
+  <p>Fuente única: <a href="docs/anteproyecto-v2.md">Anteproyecto empresarial v2</a> (8 de noviembre de 2026). Documento de trabajo para la reunión de socios del domingo 15 de noviembre de 2026, 18:00.</p>
+  <p>Es una propuesta de trabajo, no un acuerdo societario ni una autorización para comenzar operaciones. Los datos de ejemplo (CLI-0001, VEH-0001, OT-0001) son ficticios.</p>
+</footer>
+</body>
+</html>

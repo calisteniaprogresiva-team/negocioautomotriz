@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Documento de trabajo interno: anteproyecto de mecánica automotriz a domicilio.">
+<title>Sistemas propuestos · Anteproyecto v2 · Mecánica a domicilio</title>
+<link rel="stylesheet" href="assets/estilos.css">
+<script src="assets/menu.js"></script>
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<div class="barra-superior">
+  <p class="aviso-fijo" role="note"><strong>Documento de trabajo.</strong> No es una oferta comercial ni un acuerdo societario.</p>
+  <header class="cabecera">
+    <a class="marca" href="index.html"><span class="marca-sigla" aria-hidden="true">v2</span><span>Anteproyecto<br>Mecánica a domicilio</span></a>
+    <button class="boton-menu" type="button" aria-expanded="false" aria-controls="menu">Menú</button>
+  </header>
+  <nav id="menu" class="menu" aria-label="Secciones del documento">
+    <ol>
+      <li><a href="index.html"><span class="num">1</span><span>Inicio</span></a></li>
+      <li><a href="equipo.html"><span class="num">2</span><span>Equipo</span></a></li>
+      <li><a href="clientes.html"><span class="num">3</span><span>Clientes e ingresos</span></a></li>
+      <li><a href="servicios.html"><span class="num">4</span><span>Servicios</span></a></li>
+      <li><a href="experiencia.html"><span class="num">5</span><span>Experiencia del cliente</span></a></li>
+      <li><a href="ficha.html"><span class="num">6</span><span>Ficha del vehículo</span></a></li>
+      <li><a href="informe.html"><span class="num">7</span><span>Informe para el cliente</span></a></li>
+      <li><a href="sistemas.html" aria-current="page"><span class="num">8</span><span>Sistemas propuestos</span></a></li>
+      <li><a href="plan.html"><span class="num">9</span><span>Plan por etapas</span></a></li>
+      <li><a href="riesgos.html"><span class="num">10</span><span>Riesgos</span></a></li>
+      <li><a href="reunion.html"><span class="num">11</span><span>Reunión del 15</span></a></li>
+      <li><a href="pendientes.html"><span class="num">12</span><span>Pendientes y preguntas</span></a></li>
+      <li><a href="anexo.html"><span class="num">A</span><span>Anexo</span></a></li>
+    </ol>
+  </nav>
+</div>
+<main id="contenido">
+<p class="migas">Sección 8 de 12</p>
+<h1>Sistemas propuestos</h1>
+<p class="bajada">La automatización debe reducir trabajo administrativo, no agregar complejidad. Se busca un nivel <strong>intermedio</strong>: más ordenado que una planilla suelta, sin construir todavía una plataforma propia.</p>
+<div class="alerta" role="note"><span class="alerta-titulo">Requiere aprobación</span><p>La propuesta de herramientas requiere aprobación de los tres por su costo. Costos y condiciones de licencia de cada herramienta: <strong>verificar antes de contratar</strong>.</p></div>
+
+<h2>Herramientas propuestas</h2>
+<div class="tabla-envoltura"><table class="tabla">
+<thead><tr><th scope="col">Pieza</th><th scope="col">Herramienta propuesta</th><th scope="col">Para qué</th></tr></thead><tbody>
+<tr><td data-label="Pieza">Base única de datos</td><td data-label="Herramienta propuesta">Google Sheets, con tablas separadas e IDs</td><td data-label="Para qué">Fuente de verdad: clientes, vehículos, tenencias, solicitudes, cotizaciones, OT, repuestos, pagos</td></tr>
+<tr><td data-label="Pieza">App de gestión y de terreno</td><td data-label="Herramienta propuesta">AppSheet, sobre la misma base</td><td data-label="Para qué">Formularios en el celular, orden de trabajo con fotos y checklist, informe en PDF, automatizaciones simples</td></tr>
+<tr><td data-label="Pieza">Archivos</td><td data-label="Herramienta propuesta">Google Drive, una carpeta por OT</td><td data-label="Para qué">Fotos e informes enlazados desde la base</td></tr>
+<tr><td data-label="Pieza">Conversación</td><td data-label="Herramienta propuesta">WhatsApp Business</td><td data-label="Para qué">Atención y mensajes rápidos por etapa</td></tr>
+<tr><td data-label="Pieza">Solicitudes</td><td data-label="Herramienta propuesta">Formulario en la web</td><td data-label="Para qué">Escribe directamente en la base</td></tr>
+<tr><td data-label="Pieza">Visibilidad local</td><td data-label="Herramienta propuesta">Google Business Profile</td><td data-label="Para qué">Búsquedas locales y reseñas</td></tr>
+</tbody></table></div>
+<p>Se recomienda una cuenta de Google exclusiva del negocio, separada de Calistenia Progresiva y de las personales, con acceso por rol.</p>
+
+<h2>Estados del CRM</h2>
+<p>Para el lanzamiento controlado:</p>
+<ul class="chips"><li>Nuevo</li><li>En evaluación</li><li>Cotizado</li><li>Agendado</li><li>Realizado</li><li>Cerrado</li><li>Perdido</li><li>Reclamo</li></ul>
+<p>En la etapa de optimización se amplía a los 11 estados de la versión anterior (informe entregado, seguimiento, cliente recurrente, etc.).</p>
+
+<h2>Automatizaciones</h2>
+<div class="tabla-envoltura"><table class="tabla">
+<thead><tr><th scope="col">Evento</th><th scope="col">Acción</th><th scope="col">Desde</th></tr></thead><tbody>
+<tr><td data-label="Evento">Nuevo formulario</td><td data-label="Acción">Crear cliente, vehículo y solicitud</td><td data-label="Desde">Lanzamiento controlado</td></tr>
+<tr><td data-label="Evento">Reserva confirmada</td><td data-label="Acción">Enviar confirmación con condiciones</td><td data-label="Desde">Lanzamiento controlado</td></tr>
+<tr><td data-label="Evento">Servicio finalizado</td><td data-label="Acción">Generar borrador de informe</td><td data-label="Desde">Lanzamiento controlado</td></tr>
+<tr><td data-label="Evento">Informe aprobado por Gustavo</td><td data-label="Acción">Enviar al cliente</td><td data-label="Desde">Lanzamiento controlado</td></tr>
+<tr><td data-label="Evento">Reclamo recibido</td><td data-label="Acción">Crear caso de seguimiento (manual al inicio)</td><td data-label="Desde">Lanzamiento controlado</td></tr>
+<tr><td data-label="Evento">Servicio finalizado</td><td data-label="Acción">Enviar encuesta</td><td data-label="Desde">Optimización</td></tr>
+<tr><td data-label="Evento">Próxima mantención</td><td data-label="Acción">Programar recordatorio</td><td data-label="Desde">Optimización</td></tr>
+</tbody></table></div>
+<div class="destacada"><p>Decisiones técnicas, autorizaciones, cobros y garantías siempre tienen revisión humana.</p></div>
+
+<h2>Qué se reutiliza de Calistenia Progresiva</h2>
+<div class="tabla-envoltura"><table class="tabla">
+<thead><tr><th scope="col">En CP</th><th scope="col">Aquí</th></tr></thead><tbody>
+<tr><td data-label="En CP">Portal del alumno</td><td data-label="Aquí">Portal del cliente (etapa 5)</td></tr>
+<tr><td data-label="En CP">Agenda y reagendamiento</td><td data-label="Aquí">Agenda de fines de semana con capacidad por jornada</td></tr>
+<tr><td data-label="En CP">Fichas de evaluación y progreso</td><td data-label="Aquí">Ficha del vehículo y hoja de inspección con fotos</td></tr>
+<tr><td data-label="En CP">Recordatorios</td><td data-label="Aquí">Recordatorio por fecha o kilometraje</td></tr>
+<tr><td data-label="En CP">Panel del staff</td><td data-label="Aquí">Panel interno: agenda del día, ruta, repuestos, cobros</td></tr>
+<tr><td data-label="En CP">Programa de referidos</td><td data-label="Aquí">Referidos con beneficio para ambos</td></tr>
+<tr><td data-label="En CP">Finanzas con movimientos que no se editan</td><td data-label="Aquí">Ingresos y costos como movimientos; las correcciones son un movimiento nuevo</td></tr>
+<tr><td data-label="En CP">Métricas sin datos de prueba</td><td data-label="Aquí">Indicadores semanales sin mezclar pilotos con clientes reales</td></tr>
+<tr><td data-label="En CP">Centro de ayuda y guías</td><td data-label="Aquí">Procedimientos por servicio</td></tr>
+<tr><td data-label="En CP">Contenido de redes</td><td data-label="Aquí">Plan de contenido grabado durante los servicios</td></tr>
+<tr><td data-label="En CP">Legal y privacidad</td><td data-label="Aquí">Política de datos, términos del servicio, consentimiento para fotos</td></tr>
+<tr><td data-label="En CP">Proceso de venta</td><td data-label="Aquí">Guion de primer contacto, cotización, objeciones y seguimiento</td></tr>
+</tbody></table></div>
+<div class="alerta" role="note"><span class="alerta-titulo">Regla</span><p>No se usa infraestructura de Calistenia Progresiva para este negocio sin acuerdo expreso.</p></div>
+</main>
+<nav class="paginacion" aria-label="Página anterior y siguiente">
+  <a class="ant" href="informe.html" rel="prev"><small>← Anterior</small>Informe para el cliente</a>
+  <a class="sig" href="plan.html" rel="next"><small>Siguiente →</small>Plan por etapas</a>
+</nav>
+<footer class="pie">
+  <p>Fuente única: <a href="docs/anteproyecto-v2.md">Anteproyecto empresarial v2</a> (8 de noviembre de 2026). Documento de trabajo para la reunión de socios del domingo 15 de noviembre de 2026, 18:00.</p>
+  <p>Es una propuesta de trabajo, no un acuerdo societario ni una autorización para comenzar operaciones. Los datos de ejemplo (CLI-0001, VEH-0001, OT-0001) son ficticios.</p>
+</footer>
+</body>
+</html>
