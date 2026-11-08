@@ -26,6 +26,7 @@ Abre `index.html` con doble clic en cualquier navegador (también en el celular)
 | `assets/estilos.css` | Estilos |
 | `assets/menu.js` | Único script: abre y cierra el menú en el celular |
 | `docs/anteproyecto-v2.md` | Fuente única del contenido |
+| `docs/documento-inicial.md` | Borrador inicial del 6 de noviembre. Solo referencia; el sitio no lo usa |
 
 ## Reglas del sitio
 
