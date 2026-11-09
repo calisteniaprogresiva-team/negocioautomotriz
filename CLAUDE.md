@@ -93,6 +93,7 @@ Cada entregable va en su propia carpeta. Antes de empezar uno, revisa en qué et
 | Documentos para el cliente: condiciones del servicio, autorización de trabajo, política de privacidad, consentimiento de fotos, garantía | `cliente/` | Etapa 2 | Requiere revisión de abogado |
 | Modelo de datos (clientes, vehículos, tenencias, solicitudes, cotizaciones, OT, repuestos, pagos) | `sistemas/` | Etapa 2 | Propuesta: Google Sheets + AppSheet, por aprobar |
 | Plantilla del informe al cliente | `sistemas/` | Etapa 2 | Estructura en v2, sección 8 |
+| Maqueta de prueba de la web comercial (variantes A morado y B azul acero, cambia con #morado / #azul) | `web/maqueta/index.html` | Antes de la etapa 1 | Hecha; publicada como página privada para comparar en la reunión |
 | Página web comercial | `web/` | Etapa 3 en adelante | **No publicar** antes de validar capacidad, precios y cobertura |
 | Portal del cliente | `portal/` | Etapa 5 (Crecimiento) | Solo idea; no construir sin decisión |
 | Brief de diseño y prompt para probar la web en Claude Design (variantes morado y azul acero) | `marca/brief-diseno-web.md` | Antes de la etapa 1 | Hecho; la decisión de color es de los tres |

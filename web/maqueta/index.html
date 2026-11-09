@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Maqueta web mecánica a domicilio</title>
+<style>
+/* Maqueta de una sola página. Variante A (morado) por defecto; #azul cambia a la variante B sin JavaScript.
+   Idea de diseño: placas de taller sobre carbón, con pernos en las esquinas; el amarillo de seguridad solo marca lo que es ejemplo o está pendiente. */
+:root {
+  color-scheme: dark;
+  --fondo: #141417;
+  --panel: #1d1d22;
+  --linea: #34343c;
+  --texto: #ffffff;
+  --texto-2: #aeb3bc;
+  --marca: #5b2a86;
+  --marca-claro: #cfaef5;
+  --aviso: #ffb000;
+  --fuente-titulo: "Bahnschrift SemiBold Condensed", Bahnschrift, "Avenir Next Condensed", "Roboto Condensed", "sans-serif-condensed", "Arial Narrow", sans-serif;
+  --fuente-texto: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+:root:has(#azul:target) {
+  --marca: #1d4f6e;
+  --marca-claro: #8cc7e3;
+  --panel: #1b1d21;
+  --linea: #32363d;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: var(--fuente-texto);
+  font-size: 1rem;
+  line-height: 1.55;
+}
+.ancla { position: absolute; top: 0; }
+a { color: var(--marca-claro); }
+a:focus-visible, .boton:focus-visible { outline: 3px solid var(--marca-claro); outline-offset: 3px; }
+h1, h2, h3 {
+  font-family: var(--fuente-titulo);
+  font-stretch: condensed;
+  font-weight: 700;
+  line-height: 1.05;
+  text-transform: uppercase;
+  letter-spacing: .01em;
+  text-wrap: balance;
+  margin: 0;
+}
+h1 { font-size: clamp(2.3rem, 9vw, 4.2rem); }
+h2 { font-size: clamp(1.8rem, 6vw, 2.6rem); }
+h3 { font-size: 1.3rem; }
+p { margin: 0; max-width: 65ch; }
+.envoltura { width: 100%; max-width: 72rem; margin: 0 auto; padding: 0 1.1rem; }
+.seccion { padding: 3.5rem 0; border-top: 1px solid var(--linea); }
+.seccion > .envoltura { display: grid; gap: 1.6rem; }
+.antetitulo {
+  font-family: var(--fuente-titulo);
+  font-stretch: condensed;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-size: .85rem;
+  color: var(--marca-claro);
+}
+.cabeza-seccion { display: grid; gap: .6rem; }
+.cabeza-seccion p { color: var(--texto-2); }
+
+/* Cinta de ejemplo y selector de variante */
+.cinta {
+  background: repeating-linear-gradient(135deg, var(--aviso) 0 14px, #141417 14px 28px);
+  padding: 4px 0;
+}
+.cinta .envoltura {
+  background: var(--aviso);
+  color: #141417;
+  display: flex; flex-wrap: wrap; gap: .5rem 1rem;
+  align-items: center; justify-content: space-between;
+  padding-top: .45rem; padding-bottom: .45rem;
+  font-weight: 700; font-size: .85rem;
+}
+.selector { display: flex; gap: .4rem; flex-wrap: wrap; }
+.selector a {
+  color: #141417; text-decoration: none;
+  border: 2px solid #141417; border-radius: 4px;
+  padding: .1rem .55rem; font-weight: 700;
+}
+.selector a[href="#morado"] { background: #141417; color: var(--aviso); }
+:root:has(#azul:target) .selector a[href="#morado"] { background: transparent; color: #141417; }
+:root:has(#azul:target) .selector a[href="#azul"] { background: #141417; color: var(--aviso); }
+
+/* Cabecera */
+.cabecera .envoltura { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-top: 1rem; padding-bottom: 1rem; }
+.logo { display: flex; align-items: center; gap: .6rem; font-family: var(--fuente-titulo); font-stretch: condensed; font-weight: 700; text-transform: uppercase; font-size: 1.15rem; letter-spacing: .04em; }
+.logo svg { flex: none; }
+.cabecera nav { display: none; gap: 1.2rem; font-size: .95rem; }
+.cabecera nav a { color: var(--texto-2); text-decoration: none; }
+.cabecera nav a:hover { color: var(--texto); }
+@media (min-width: 52rem) { .cabecera nav { display: flex; } }
+
+/* Botones */
+.botones { display: flex; flex-wrap: wrap; gap: .8rem; }
+.boton {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 3rem; padding: .7rem 1.3rem;
+  border-radius: 4px; border: 2px solid var(--marca);
+  background: var(--marca); color: #ffffff;
+  font-family: var(--fuente-titulo); font-stretch: condensed; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .06em; font-size: 1.05rem;
+  text-decoration: none;
+}
+.boton.secundario { background: transparent; color: var(--texto); border-color: var(--linea); }
+
+/* Placa con pernos */
+.placa {
+  position: relative;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,0) 40%),
+    var(--panel);
+  border: 1px solid var(--linea);
+  border-radius: 6px;
+  padding: 1.4rem 1.2rem;
+}
+.placa::before, .placa::after {
+  content: ""; position: absolute; top: 9px; width: 7px; height: 7px; border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #8a8f98, #3a3d44);
+}
+.placa::before { left: 9px; }
+.placa::after { right: 9px; }
+
+/* Portada */
+.portada { padding: 2.5rem 0 3.5rem; }
+.portada .envoltura { display: grid; gap: 2.2rem; }
+@media (min-width: 56rem) { .portada .envoltura { grid-template-columns: 1.25fr 1fr; align-items: center; } }
+.portada-texto { display: grid; gap: 1.2rem; }
+.portada-texto p { color: var(--texto-2); font-size: 1.1rem; }
+.franja-marca { width: 4.5rem; height: 6px; background: var(--marca-claro); }
+
+.ficha { display: grid; gap: .9rem; }
+.ficha-cabeza { display: flex; justify-content: space-between; align-items: baseline; gap: .5rem; flex-wrap: wrap; padding-top: .4rem; }
+.ficha-cabeza strong { font-family: var(--fuente-titulo); font-stretch: condensed; text-transform: uppercase; font-size: 1.25rem; letter-spacing: .04em; }
+.codigo { font-family: ui-monospace, "SFMono-Regular", Consolas, monospace; font-size: .85rem; color: var(--marca-claro); font-variant-numeric: tabular-nums; }
+.ficha ol { list-style: none; margin: 0; padding: 0; display: grid; gap: .55rem; }
+.ficha li { display: grid; grid-template-columns: auto 1fr; gap: .2rem .8rem; padding: .7rem .8rem; border-left: 3px solid var(--marca-claro); background: rgba(255,255,255,.03); }
+.ficha li span:last-child { grid-column: 2; color: var(--texto-2); font-size: .9rem; }
+.ficha .proxima { border-left-color: var(--aviso); }
+
+/* Etiquetas */
+.etq {
+  display: inline-block; width: fit-content;
+  font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em;
+  padding: .15rem .5rem; border-radius: 3px;
+  background: var(--aviso); color: #141417;
+}
+.etq.borde { background: transparent; color: var(--aviso); border: 1px solid var(--aviso); }
+
+/* Pilares */
+.pilares ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .8rem; grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); }
+.pilares li { display: grid; gap: .3rem; padding: 1rem 0 0; border-top: 3px solid var(--marca); }
+.pilares li strong { font-family: var(--fuente-titulo); font-stretch: condensed; text-transform: uppercase; font-size: 1.2rem; letter-spacing: .03em; }
+.pilares li span { color: var(--texto-2); font-size: .95rem; }
+
+/* Servicios */
+.rejilla { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); }
+.servicio { display: grid; gap: .8rem; align-content: start; }
+.servicio h3 { padding-top: .5rem; }
+.servicio dl { margin: 0; display: grid; gap: .55rem; }
+.servicio dt { font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--marca-claro); }
+.servicio dd { margin: 0; color: var(--texto-2); font-size: .95rem; }
+.pend { color: var(--aviso); }
+.limite { border-left: 4px solid var(--aviso); padding: .9rem 1rem; background: rgba(255,176,0,.07); color: var(--texto); }
+.limite strong { color: var(--aviso); }
+
+/* Pasos */
+.pasos { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); counter-reset: paso; }
+.pasos li { counter-increment: paso; display: grid; gap: .4rem; padding: 1rem; border: 1px solid var(--linea); border-radius: 6px; background: var(--panel); }
+.pasos li::before {
+  content: counter(paso);
+  font-family: var(--fuente-titulo); font-stretch: condensed; font-weight: 700;
+  font-size: 2.4rem; line-height: 1; color: var(--marca-claro);
+}
+.pasos li strong { font-family: var(--fuente-titulo); font-stretch: condensed; text-transform: uppercase; font-size: 1.15rem; letter-spacing: .03em; }
+.pasos li span { color: var(--texto-2); font-size: .93rem; }
+.pasos li small { color: var(--texto-2); opacity: .8; font-variant-numeric: tabular-nums; }
+
+/* Lugar */
+.dos-col { display: grid; gap: 1.2rem; }
+@media (min-width: 52rem) { .dos-col { grid-template-columns: 1fr 1fr; align-items: start; } }
+.lista-chequeo { list-style: none; margin: 0; padding: 0; display: grid; gap: .6rem; }
+.lista-chequeo li { display: grid; grid-template-columns: 1.4rem 1fr; gap: .6rem; align-items: start; }
+.lista-chequeo li::before { content: ""; width: 1.1rem; height: 1.1rem; margin-top: .2rem; border: 2px solid var(--marca-claro); border-radius: 3px; }
+
+/* Informe */
+.informe { background: #f4f4f6; color: #141417; border-radius: 4px; padding: 1.2rem; display: grid; gap: .9rem; position: relative; overflow: hidden; }
+.informe::after {
+  content: "EJEMPLO"; position: absolute; right: -1rem; bottom: 1.2rem; transform: rotate(-18deg);
+  font-family: var(--fuente-titulo); font-stretch: condensed; font-weight: 700; font-size: 3.4rem;
+  color: rgba(20,20,23,.07); pointer-events: none;
+}
+.informe-cabeza { display: flex; justify-content: space-between; gap: .5rem; flex-wrap: wrap; border-bottom: 3px solid var(--marca); padding-bottom: .6rem; }
+.informe-cabeza strong { font-family: var(--fuente-titulo); font-stretch: condensed; text-transform: uppercase; font-size: 1.15rem; }
+.informe-cabeza span { font-family: ui-monospace, Consolas, monospace; font-size: .8rem; font-variant-numeric: tabular-nums; }
+.informe-bloques { display: grid; gap: .6rem; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); }
+.informe-bloques div { border: 1px solid #c9ccd2; border-radius: 3px; padding: .6rem .7rem; display: grid; gap: .2rem; }
+.informe-bloques b { font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; }
+.informe-bloques span { font-size: .88rem; color: #4a4d55; }
+.informe-bloques .atencion { border-color: #b37a00; background: #fff6df; }
+.informe small { color: #4a4d55; }
+
+.equipo { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); }
+.persona { display: grid; grid-template-columns: 4rem 1fr; gap: 1rem; align-items: center; }
+.foto-marcador {
+  width: 4rem; height: 4rem; border-radius: 4px; border: 2px dashed var(--linea);
+  display: grid; place-items: center; text-align: center; font-size: .62rem; line-height: 1.2; color: var(--texto-2); padding: .2rem;
+}
+.persona strong { font-family: var(--fuente-titulo); font-stretch: condensed; text-transform: uppercase; font-size: 1.15rem; display: block; }
+.persona span { color: var(--texto-2); font-size: .92rem; }
+.marcador {
+  border: 2px dashed var(--linea); border-radius: 6px; padding: 1.4rem 1.2rem;
+  color: var(--texto-2); display: grid; gap: .4rem; text-align: center; justify-items: center;
+}
+
+/* Contacto */
+.contacto-botones { display: grid; gap: .8rem; }
+.boton.whatsapp { background: #25d366; border-color: #25d366; color: #141417; }
+.boton[aria-disabled="true"] { cursor: not-allowed; }
+
+.pie { border-top: 1px solid var(--linea); padding: 2rem 0 2.5rem; color: var(--texto-2); font-size: .88rem; }
+.pie .envoltura { display: grid; gap: .5rem; }
+</style>
+</head>
+<body>
+<span id="morado" class="ancla"></span>
+<span id="azul" class="ancla"></span>
+
+<div class="cinta" role="note">
+  <div class="envoltura">
+    <span>EJEMPLO · Prueba de diseño. No es una oferta comercial.</span>
+    <span class="selector" aria-label="Variante de color">
+      <a href="#morado">A · Morado</a>
+      <a href="#azul">B · Azul acero</a>
+    </span>
+  </div>
+</div>
+
+<header class="cabecera">
+  <div class="envoltura">
+    <div class="logo">
+      <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true">
+        <rect x="1" y="1" width="30" height="30" rx="4" fill="var(--marca)"/>
+        <path d="M21.5 6.5a5.5 5.5 0 0 0-5.3 7l-8.4 8.4a2 2 0 1 0 2.8 2.8l8.4-8.4a5.5 5.5 0 0 0 7-5.3l-3 3-3-1-1-3z" fill="#ffffff"/>
+      </svg>
+      [Nombre por definir]
+    </div>
+    <nav aria-label="Secciones">
+      <a href="#servicios">Servicios</a>
+      <a href="#como-funciona">Cómo funciona</a>
+      <a href="#cobertura">Cobertura</a>
+      <a href="#confianza">Confianza</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="portada" aria-labelledby="titulo">
+    <div class="envoltura">
+      <div class="portada-texto">
+        <span class="antetitulo">Mecánica a domicilio · Santiago</span>
+        <div class="franja-marca" aria-hidden="true"></div>
+        <h1 id="titulo">Mantención de tu auto a domicilio, con historial y recordatorio</h1>
+        <p>Atendemos con reserva anticipada, los fines de semana. Cada trabajo queda registrado en la ficha de tu vehículo y recibes un informe con lo que se hizo.</p>
+        <div class="botones">
+          <a class="boton" href="#contacto">Solicitar evaluación</a>
+          <a class="boton secundario" href="#como-funciona">Cómo funciona</a>
+        </div>
+      </div>
+
+      <aside class="placa ficha" aria-label="Ejemplo de ficha del vehículo">
+        <div class="ficha-cabeza">
+          <strong>Historial del vehículo</strong>
+          <span class="codigo">VEH-0001</span>
+        </div>
+        <ol>
+          <li><span class="codigo">OT-0001</span><span>Cambio de aceite y filtro de aceite</span><span>[fecha] · [kilometraje] · informe entregado</span></li>
+          <li><span class="codigo">OT-0002</span><span>Inspección visual preventiva</span><span>[fecha] · [kilometraje] · 2 observaciones</span></li>
+          <li class="proxima"><span class="codigo">PRÓX.</span><span>Próxima mantención</span><span>Por fecha o kilometraje, según el fabricante</span></li>
+        </ol>
+        <span class="etq borde">Datos de ejemplo</span>
+      </aside>
+    </div>
+  </section>
+
+  <section class="seccion pilares" aria-labelledby="t-pilares">
+    <div class="envoltura">
+      <div class="cabeza-seccion">
+        <span class="antetitulo">Cómo trabajamos</span>
+        <h2 id="t-pilares">Cinco compromisos</h2>
+      </div>
+      <ul>
+        <li><strong>Confianza</strong><span>Transparencia en trabajos, precios y repuestos.</span></li>
+        <li><strong>Profesionalismo</strong><span>Procedimientos escritos y registro de cada intervención.</span></li>
+        <li><strong>Comodidad</strong><span>Atención coordinada en tu casa o tu trabajo.</span></li>
+        <li><strong>Seguimiento</strong><span>Historial digital y recordatorio de la próxima mantención.</span></li>
+        <li><strong>Responsabilidad</strong><span>Respaldo si algo sale mal después del servicio.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="seccion" id="servicios" aria-labelledby="t-servicios">
+    <div class="envoltura">
+      <div class="cabeza-seccion">
+        <span class="antetitulo">Servicios</span>
+        <h2 id="t-servicios">Trabajos simples, bien hechos</h2>
+        <p>Empezamos con pocos servicios. Cada uno se ofrece solo cuando la dirección técnica lo aprueba. El precio se cierra por servicio y vehículo antes de empezar.</p>
+      </div>
+
+      <div class="rejilla">
+        <article class="placa servicio">
+          <h3>Cambio de aceite y filtro de aceite</h3>
+          <span class="etq">En evaluación</span>
+          <dl>
+            <dt>Qué incluye</dt><dd class="pend">Por definir con la dirección técnica</dd>
+            <dt>Qué no incluye</dt><dd class="pend">Por definir</dd>
+            <dt>Para cotizar</dt><dd>Marca, modelo, año, versión, motor y kilometraje</dd>
+          </dl>
+        </article>
+        <article class="placa servicio">
+          <h3>Cambio de filtro de aire</h3>
+          <span class="etq">En evaluación</span>
+          <dl>
+            <dt>Qué incluye</dt><dd class="pend">Por definir con la dirección técnica</dd>
+            <dt>Qué no incluye</dt><dd class="pend">Por definir</dd>
+            <dt>Para cotizar</dt><dd>Marca, modelo, año, versión y motor</dd>
+          </dl>
+        </article>
+        <article class="placa servicio">
+          <h3>Cambio de filtro de habitáculo</h3>
+          <span class="etq">En evaluación</span>
+          <dl>
+            <dt>Qué incluye</dt><dd class="pend">Por definir con la dirección técnica</dd>
+            <dt>Qué no incluye</dt><dd class="pend">Por definir</dd>
+            <dt>Para cotizar</dt><dd>Marca, modelo, año y versión</dd>
+          </dl>
+        </article>
+        <article class="placa servicio">
+          <h3>Inspección visual preventiva</h3>
+          <span class="etq">En evaluación</span>
+          <dl>
+            <dt>Qué incluye</dt><dd>Niveles, neumáticos, luces, escobillas, batería y estado visible de pastillas. También en versión antes de un viaje.</dd>
+            <dt>Qué no incluye</dt><dd>No es un diagnóstico mecánico integral.</dd>
+            <dt>Para cotizar</dt><dd>Marca, modelo, año y kilometraje</dd>
+          </dl>
+        </article>
+        <article class="placa servicio">
+          <h3>Cambio de bujías</h3>
+          <span class="etq">En evaluación</span>
+          <dl>
+            <dt>Qué incluye</dt><dd class="pend">Por definir según motor y especificaciones</dd>
+            <dt>Qué no incluye</dt><dd class="pend">Por definir</dd>
+            <dt>Para cotizar</dt><dd>Marca, modelo, año, versión y motor</dd>
+          </dl>
+        </article>
+        <article class="placa servicio">
+          <h3>Revisión y cambio de batería</h3>
+          <span class="etq">En evaluación</span>
+          <dl>
+            <dt>Qué incluye</dt><dd class="pend">Por definir con la dirección técnica</dd>
+            <dt>Qué no incluye</dt><dd class="pend">Por definir</dd>
+            <dt>Para cotizar</dt><dd>Marca, modelo, año y versión</dd>
+          </dl>
+        </article>
+      </div>
+
+      <p class="limite"><strong>Lo que no hacemos a domicilio:</strong> trabajos que necesitan elevador, soldadura o desarme grande. Embragues y reparaciones extensas se derivan a talleres colaboradores. Lista completa por definir.</p>
+    </div>
+  </section>
+
+  <section class="seccion" id="como-funciona" aria-labelledby="t-como">
+    <div class="envoltura">
+      <div class="cabeza-seccion">
+        <span class="antetitulo">Cómo funciona</span>
+        <h2 id="t-como">De la solicitud al recordatorio</h2>
+        <p><span class="etq borde">Propuesta por definir</span> Seis pasos que agrupan los 14 del flujo de atención del anteproyecto.</p>
+      </div>
+      <ol class="pasos">
+        <li><strong>Solicitas</strong><span>Escribes por la web o WhatsApp con los datos del vehículo y del lugar.</span><small>Pasos 1 a 3</small></li>
+        <li><strong>Revisamos</strong><span>La dirección técnica confirma que el trabajo se puede hacer bien a domicilio.</span><small>Pasos 4 y 5</small></li>
+        <li><strong>Cotizamos</strong><span>Recibes un precio cerrado con repuestos y condiciones. Aceptas y reservas.</span><small>Pasos 6 y 7</small></li>
+        <li><strong>Confirmamos</strong><span>Dirección, fecha, rango horario y condiciones del lugar.</span><small>Paso 8</small></li>
+        <li><strong>Hacemos el trabajo</strong><span>Registramos kilometraje, fotos antes y después, y repuestos instalados.</span><small>Pasos 9 y 10</small></li>
+        <li><strong>Te informamos</strong><span>Recibes el informe, el auto queda en su historial y programamos el recordatorio.</span><small>Pasos 11 a 14</small></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="seccion" aria-labelledby="t-lugar">
+    <div class="envoltura dos-col">
+      <div class="cabeza-seccion">
+        <span class="antetitulo">Antes de agendar</span>
+        <h2 id="t-lugar">El lugar tiene que ser seguro</h2>
+        <p>Te lo preguntamos al reservar. Si no se cumple, no agendamos: la seguridad va primero.</p>
+        <span class="etq borde">Lista final por definir con la dirección técnica</span>
+      </div>
+      <ul class="placa lista-chequeo">
+        <li>Superficie plana y firme</li>
+        <li>Espacio alrededor del vehículo</li>
+        <li>Ventilación e iluminación</li>
+        <li>Fuera de la vía pública</li>
+        <li>Permiso del edificio o comunidad, si corresponde</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="seccion" id="cobertura" aria-labelledby="t-cobertura">
+    <div class="envoltura">
+      <div class="cabeza-seccion">
+        <span class="antetitulo">Cobertura</span>
+        <h2 id="t-cobertura">Santiago</h2>
+        <p>Comunas y radio máximo <span class="pend">por confirmar</span>. Solo publicaremos la cobertura real.</p>
+      </div>
+      <div class="marcador">
+        <span class="etq borde">Por confirmar</span>
+        <span>Aquí irá el mapa o la lista de comunas atendidas.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion" id="confianza" aria-labelledby="t-confianza">
+    <div class="envoltura">
+      <div class="cabeza-seccion">
+        <span class="antetitulo">Confianza</span>
+        <h2 id="t-confianza">Todo queda por escrito</h2>
+        <p>Después de cada servicio recibes un informe revisado por la dirección técnica. Separa con claridad lo que se hizo, lo que se revisó y lo que queda pendiente.</p>
+      </div>
+
+      <div class="dos-col">
+        <article class="informe" aria-label="Miniatura de informe de ejemplo">
+          <div class="informe-cabeza">
+            <strong>Informe del servicio</strong>
+            <span>OT-0001 · CLI-0001 · VEH-0001</span>
+          </div>
+          <div class="informe-bloques">
+            <div><b>Trabajos realizados</b><span>Cambio de aceite y filtro de aceite</span></div>
+            <div><b>Elementos inspeccionados</b><span>Niveles, luces, neumáticos, escobillas</span></div>
+            <div class="atencion"><b>Requiere atención</b><span>[Observación técnica de ejemplo]</span></div>
+            <div><b>Recomendado, no ejecutado</b><span>[Trabajo recomendado de ejemplo]</span></div>
+          </div>
+          <small>Una inspección visual nunca se presenta como diagnóstico mecánico integral.</small>
+        </article>
+
+        <div style="display:grid;gap:1rem">
+          <div class="equipo">
+            <div class="placa persona">
+              <div class="foto-marcador">Foto real del equipo</div>
+              <div><strong>Dirección técnica</strong><span>Evalúa cada servicio, valida repuestos y revisa cada informe.</span></div>
+            </div>
+            <div class="placa persona">
+              <div class="foto-marcador">Foto real del equipo</div>
+              <div><strong>Gestión y atención</strong><span>Coordina tu reserva, el informe y el recordatorio.</span></div>
+            </div>
+          </div>
+          <div class="marcador">
+            <span>Aquí irán fotos reales de servicios, con permiso del cliente y sin patentes ni domicilios.</span>
+          </div>
+          <div class="marcador">
+            <span>Aquí irán opiniones verificadas de clientes reales.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion" id="contacto" aria-labelledby="t-contacto">
+    <div class="envoltura dos-col">
+      <div class="cabeza-seccion">
+        <span class="antetitulo">Contacto</span>
+        <h2 id="t-contacto">Solicita una evaluación</h2>
+        <p>Cuéntanos qué vehículo tienes y dónde está. Revisamos si podemos hacer el trabajo bien antes de cotizar.</p>
+      </div>
+      <div class="contacto-botones">
+        <span class="boton whatsapp" role="link" aria-disabled="true">WhatsApp · número por definir</span>
+        <div class="marcador">
+          <span class="etq borde">Por definir</span>
+          <span>Aquí irá el formulario de solicitud: datos del vehículo y condiciones del lugar.</span>
+        </div>
+        <a href="#contacto">Política de privacidad (por redactar y revisar con abogado)</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pie">
+  <div class="envoltura">
+    <span>[Nombre por definir] · Mecánica automotriz a domicilio · Santiago</span>
+    <span>Maqueta de prueba de diseño, noviembre de 2026. No tiene precios, cobertura ni servicios aprobados.</span>
+  </div>
+</footer>
+</body>
+</html>
