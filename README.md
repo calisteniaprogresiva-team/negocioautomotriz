@@ -25,6 +25,9 @@ Abre `index.html` con doble clic en cualquier navegador (también en el celular)
 | `anexo.html` | Anexo: marca, fidelización, web, postventa, seguridad, economía, legal, principios |
 | `assets/estilos.css` | Estilos |
 | `assets/menu.js` | Único script: abre y cierra el menú en el celular |
+| `CLAUDE.md` | Contexto maestro para Claude Code (reglas, estado y hoja de ruta) |
+| `docs/prompt-maestro.md` | Prompt para pegar al iniciar una sesión nueva |
+| `docs/decisiones.md` | Registro de acuerdos de los socios |
 | `docs/anteproyecto-v2.md` | Fuente única del contenido |
 | `docs/documento-inicial.md` | Borrador inicial del 6 de noviembre. Solo referencia; el sitio no lo usa |
 
