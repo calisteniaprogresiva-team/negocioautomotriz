@@ -95,6 +95,7 @@ Cada entregable va en su propia carpeta. Antes de empezar uno, revisa en qué et
 | Plantilla del informe al cliente | `sistemas/` | Etapa 2 | Estructura en v2, sección 8 |
 | Página web comercial | `web/` | Etapa 3 en adelante | **No publicar** antes de validar capacidad, precios y cobertura |
 | Portal del cliente | `portal/` | Etapa 5 (Crecimiento) | Solo idea; no construir sin decisión |
+| Brief de diseño y prompt para probar la web en Claude Design (variantes morado y azul acero) | `marca/brief-diseno-web.md` | Antes de la etapa 1 | Hecho; la decisión de color es de los tres |
 | Identidad: logo, tarjetas, uniforme | `marca/` | Cuando haya nombre | Pendiente del nombre |
 
 Estructura de la web comercial según el v2 (sección 11): Inicio · Servicios · Cómo funciona · Cobertura real · Confianza · Contacto. Solo se publica la cobertura real, sin comprar publicidad antes de validar.
@@ -133,6 +134,7 @@ Temas del documento inicial que **no pasaron** al v2 (no recuperarlos sin decisi
 | `docs/decisiones.md` | Registro de acuerdos de los socios |
 | `docs/anteproyecto-v2.md` | Anteproyecto vigente |
 | `docs/documento-inicial.md` | Borrador inicial, solo referencia |
+| `marca/brief-diseno-web.md` | Recomendación de color, paletas y prompt para Claude Design |
 | `index.html` … `anexo.html` | Sitio de lectura (13 páginas) |
 | `assets/estilos.css`, `assets/menu.js` | Estilos e único script del sitio |
 | `README.md` | Cómo abrir el sitio |
