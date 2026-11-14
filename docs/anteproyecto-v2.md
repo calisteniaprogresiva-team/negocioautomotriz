@@ -64,9 +64,9 @@ Dirección y coordinación general, gestión de clientes y reservas, experiencia
 
 ### 2.2 Gustavo — Dirección técnica automotriz (propuesto)
 
-**Antecedentes confirmados:** experiencia práctica en mecánica; trabaja en venta de repuestos; experiencia en aceite y filtros, bujías, baterías, embragues, piolas y frenos; tiene herramientas básicas; mantiene su Nissan March.
+**Antecedentes confirmados:** experiencia práctica en mecánica; tiene otro empleo; experiencia en aceite y filtros, bujías, baterías, embragues, piolas y frenos; tiene herramientas básicas; mantiene su Nissan March.
 
-**Disponibilidad informada:** trabaja en la tienda de repuestos solo dos sábados al mes. Esto deja disponibles, en principio, los domingos y los otros dos sábados de cada mes. *Por confirmar con Gustavo:* cuántas horas por jornada puede dedicar, si los sábados que trabaja se conocen con anticipación y si su contrato tiene cláusulas de exclusividad o de no competencia.
+**Disponibilidad informada:** trabaja en su empleo actual solo dos sábados al mes. Esto deja disponibles, en principio, los domingos y los otros dos sábados de cada mes. *Por confirmar con Gustavo:* cuántas horas por jornada puede dedicar, si los sábados que trabaja se conocen con anticipación y si su contrato tiene cláusulas de exclusividad o de no competencia.
 
 **Áreas:** evaluación técnica de servicios, selección de herramientas, repuestos compatibles, procedimientos, revisión técnica de cotizaciones, ejecución, control de calidad, validación de informes, evaluación de reclamos y garantías.
 

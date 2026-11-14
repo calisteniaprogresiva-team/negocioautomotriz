@@ -17,7 +17,7 @@ Una **empresa de mecánica automotriz a domicilio en Santiago de Chile**, en eta
 | Persona | Rol propuesto (no definitivo) | Notas |
 | --- | --- | --- |
 | **José Vargas** (aparece como «Usuario» en el v2) | Gestión y desarrollo empresarial: clientes, reservas, experiencia, fidelización, marketing, web, CRM, automatización, fichas, informes, indicadores | Es quien trabaja con Claude Code. Por definir si administra el dinero y los documentos tributarios (decisión de los tres). Aporta el Hyundai i10 como vehículo piloto. |
-| **Gustavo** | Dirección técnica automotriz | Trabaja en Bruno (Chile) y solo trabaja dos sábados al mes allí. **Corrección de José del 14 de nov de 2026:** el v2 dice que trabaja en una tienda de repuestos; eso no es correcto. **Tiene veto técnico**: puede detener un servicio por sí solo. Aporta el Nissan March como vehículo piloto. Por confirmar: horas por jornada, si conoce sus sábados con anticipación, cláusulas de exclusividad o no competencia (en su trabajo actual). |
+| **Gustavo** | Dirección técnica automotriz | Tiene otro empleo y solo trabaja dos sábados al mes allí. No se nombra la empresa. (José corrigió el 14 de nov de 2026 que no trabaja en una tienda de repuestos; ya corregido en el v2 y el sitio.) **Tiene veto técnico**: puede detener un servicio por sí solo. Aporta el Nissan March como vehículo piloto. Por confirmar: horas por jornada, si conoce sus sábados con anticipación, cláusulas de exclusividad o no competencia (en su trabajo actual). |
 | **Javier Cañi** | Incorporación pendiente | No se ha definido nada: experiencia, disponibilidad, aportes, funciones ni participación. |
 
 No hay porcentajes, aportes ni responsabilidades definitivas. **Nunca** los asumas.
@@ -126,7 +126,6 @@ Estructura de la web comercial según el v2 (sección 11): Inicio · Servicios �
 8. El plan anual aparece como fuente de ingreso y también como idea para más adelante.
 9. Ley 21.719: vigencia el 1 de diciembre de 2026, con una postergación aún no verificada.
 10. El informe lleva datos del cliente, pero los documentos internos usan identificadores.
-11. El v2 (secciones 2.2 y 17) dice que Gustavo trabaja en venta de repuestos o en una tienda de repuestos. José corrigió el 14 de noviembre: trabaja en Bruno, no en una tienda de repuestos. El v2, el sitio de lectura y su página publicada todavía dicen lo anterior; falta decidir si se corrigen.
 
 Temas del documento inicial que **no pasaron** al v2 (no recuperarlos sin decisión): modalidad de punto fijo (cochera o bodega por horas), convenios con oficinas y comunidades de edificios, franquicia o método replicable, lista de indicadores semanales, reparto de roles «cuerpo y cerebro» entre dos socios, y la administración del dinero asignada a José.
 
