@@ -24,14 +24,17 @@ No hay porcentajes, aportes ni responsabilidades definitivas. **Nunca** los asum
 
 ## 3. Estado actual (actualizar cada vez que cambie)
 
-- **Fecha de este estado:** 9 de noviembre de 2026.
+- **Fecha de este estado:** 14 de noviembre de 2026.
 - **Etapa del plan:** antes de la etapa 1 (Validación).
 - **Próximo hito:** reunión de socios del **domingo 15 de noviembre de 2026, 18:00**. Agenda y resultados esperados en `docs/anteproyecto-v2.md`, sección 18.
 - **Hecho:**
   - Sitio estático de solo lectura del anteproyecto v2 (raíz del repositorio), para la reunión.
   - Publicado como página privada de Claude: https://claude.ai/artifact/KuwZubRshgu3fzhBAeABRq (solo la ve José hasta que la comparta desde claude.ai).
   - Borrador inicial del 6 de noviembre guardado como referencia en `docs/documento-inicial.md`.
-- **Pendiente:** todo lo que la reunión decida. Registrar cada acuerdo en `docs/decisiones.md`.
+  - Maqueta de la web con variantes de color: https://claude.ai/artifact/YUwsxaZBiq5dvKd9AAK8xt (privada).
+  - Documento compartido para completar entre socios, porque no habrá reunión presencial: https://claude.ai/artifact/Thrjf7DfTbAQ866S2FGLM4 (privado hasta que José lo comparta). Tiene preguntas para cada socio, tabla de decisiones y resultados esperados.
+- **Pendiente:** lo que los socios respondan en el documento compartido. Cuando los tres marquen un tema como acordado, pasarlo a `docs/decisiones.md`.
+- **Pendiente (anterior):** todo lo que la reunión decida. Registrar cada acuerdo en `docs/decisiones.md`.
 
 ## 4. Fuentes de verdad (en este orden)
 
