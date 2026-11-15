@@ -22,11 +22,13 @@ Abre `index.html` con doble clic en cualquier navegador (también en el celular)
 | `riesgos.html` | 10. Riesgos |
 | `reunion.html` | 11. Reunión del 15 |
 | `pendientes.html` | 12. Decisiones pendientes y preguntas abiertas |
+| `respuestas.html` | 13. Respuestas de los socios (copia del documento compartido) |
 | `anexo.html` | Anexo: marca, fidelización, web, postventa, seguridad, economía, legal, principios |
 | `assets/estilos.css` | Estilos |
 | `assets/menu.js` | Único script: abre y cierra el menú en el celular |
 | `CLAUDE.md` | Contexto maestro para Claude Code (reglas, estado y hoja de ruta) |
 | `docs/prompt-maestro.md` | Prompt para pegar al iniciar una sesión nueva |
+| `docs/respuestas-socios.md` | Copia en texto de las respuestas de los socios |
 | `docs/decisiones.md` | Registro de acuerdos de los socios |
 | `docs/anteproyecto-v2.md` | Fuente única del contenido |
 | `docs/documento-inicial.md` | Borrador inicial del 6 de noviembre. Solo referencia; el sitio no lo usa |

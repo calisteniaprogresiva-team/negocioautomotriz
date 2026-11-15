@@ -24,7 +24,7 @@ No hay porcentajes, aportes ni responsabilidades definitivas. **Nunca** los asum
 
 ## 3. Estado actual (actualizar cada vez que cambie)
 
-- **Fecha de este estado:** 14 de noviembre de 2026.
+- **Fecha de este estado:** 15 de noviembre de 2026.
 - **Etapa del plan:** antes de la etapa 1 (Validación).
 - **Próximo hito:** reunión de socios del **domingo 15 de noviembre de 2026, 18:00**. Agenda y resultados esperados en `docs/anteproyecto-v2.md`, sección 18.
 - **Hecho:**
@@ -33,6 +33,7 @@ No hay porcentajes, aportes ni responsabilidades definitivas. **Nunca** los asum
   - Borrador inicial del 6 de noviembre guardado como referencia en `docs/documento-inicial.md`.
   - Maqueta de la web con variantes de color: https://claude.ai/artifact/YUwsxaZBiq5dvKd9AAK8xt (privada).
   - Documento compartido para completar entre socios, porque no habrá reunión presencial: https://claude.ai/artifact/Thrjf7DfTbAQ866S2FGLM4 (privado hasta que José lo comparta). Tiene preguntas para cada socio, tabla de decisiones y resultados esperados. **Fecha límite para responder: lunes 16 de noviembre de 2026.**
+  - Página `respuestas.html` (sección 13 del sitio) y `docs/respuestas-socios.md`: reciben una copia de las respuestas. Hoy todo está en «Por responder»; todavía no se ha copiado nada.
 - **Pendiente:** lo que los socios respondan en el documento compartido. Cuando los tres marquen un tema como acordado, pasarlo a `docs/decisiones.md`.
 - **Pendiente (anterior):** todo lo que la reunión decida. Registrar cada acuerdo en `docs/decisiones.md`.
 
@@ -136,11 +137,25 @@ Temas del documento inicial que **no pasaron** al v2 (no recuperarlos sin decisi
 | `CLAUDE.md` | Este archivo: contexto maestro |
 | `docs/prompt-maestro.md` | Prompt para pegar al iniciar una sesión nueva (por ejemplo, fuera de este repositorio) |
 | `docs/decisiones.md` | Registro de acuerdos de los socios |
+| `docs/respuestas-socios.md` | Copia en texto de las respuestas de los socios (la misma que `respuestas.html`) |
 | `docs/anteproyecto-v2.md` | Anteproyecto vigente |
 | `docs/documento-inicial.md` | Borrador inicial, solo referencia |
 | `marca/brief-diseno-web.md` | Recomendación de color, paletas y prompt para Claude Design |
-| `index.html` … `anexo.html` | Sitio de lectura (13 páginas) |
+| `index.html` … `anexo.html` | Sitio de lectura (14 páginas: 13 secciones y el anexo) |
 | `assets/estilos.css`, `assets/menu.js` | Estilos e único script del sitio |
 | `README.md` | Cómo abrir el sitio |
+
+### Cómo copiar las respuestas de los socios (cuando José lo pida)
+
+El sitio no recibe datos: las respuestas se escriben en el documento compartido (doc id `d84201ab-ec6a-426c-b59d-9783240fe2cf`, se lee con las herramientas de Claude Docs) y se copian aquí a mano.
+
+1. Lee el documento y copia **textualmente** las respuestas, sin resumir ni corregir.
+2. Actualiza `docs/respuestas-socios.md` y `respuestas.html` con las mismas respuestas, y cambia el recuadro «Última copia» con la fecha.
+3. Lo que siga sin respuesta se queda como «Por responder», «Por marcar» o «Por proponer».
+4. Un tema pasa a `docs/decisiones.md` solo cuando los tres lo marcaron igual.
+5. Las respuestas pueden incluir datos de cada socio (horarios, cláusulas del contrato): el sitio es solo para los tres, no se publica abierto.
+6. Vuelve a publicar la página privada (el link se mantiene).
+
+Las páginas se editan a mano: el generador que las creó no está en el repositorio. Si se agrega una página, hay que actualizar el menú y la paginación de todas.
 
 **Sitio de lectura:** HTML y CSS puro, script mínimo solo para el menú, sin frameworks, sin npm, sin compilación, sin formularios, cookies, analítica ni recursos externos. Se abre con doble clic en `index.html`. Si cambia el anteproyecto, hay que actualizar las páginas y volver a publicar la página privada (el link se mantiene).
