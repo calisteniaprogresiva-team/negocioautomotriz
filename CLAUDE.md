@@ -24,16 +24,16 @@ No hay porcentajes, aportes ni responsabilidades definitivas. **Nunca** los asum
 
 ## 3. Estado actual (actualizar cada vez que cambie)
 
-- **Fecha de este estado:** 15 de noviembre de 2026.
+- **Fecha de este estado:** 18 de noviembre de 2026.
 - **Etapa del plan:** antes de la etapa 1 (Validación).
 - **Próximo hito:** reunión de socios del **domingo 15 de noviembre de 2026, 18:00**. Agenda y resultados esperados en `docs/anteproyecto-v2.md`, sección 18.
 - **Hecho:**
   - Sitio estático de solo lectura del anteproyecto v2 (raíz del repositorio), para la reunión.
-  - Publicado como página privada de Claude: https://claude.ai/artifact/KuwZubRshgu3fzhBAeABRq (solo la ve José hasta que la comparta desde claude.ai).
+  - Publicado como página de Claude: https://claude.ai/artifact/KuwZubRshgu3fzhBAeABRq. **Al 18 de nov de 2026 sigue pública** (cualquiera con el link). José pidió dejarla privada y debe cambiarlo él desde Compartir; no se ha confirmado. La versión publicada **no** incluye la sección 13 ni las respuestas.
   - Borrador inicial del 6 de noviembre guardado como referencia en `docs/documento-inicial.md`.
   - Maqueta de la web con variantes de color: https://claude.ai/artifact/YUwsxaZBiq5dvKd9AAK8xt (privada).
   - Documento compartido para completar entre socios, porque no habrá reunión presencial: https://claude.ai/artifact/Thrjf7DfTbAQ866S2FGLM4 (privado hasta que José lo comparta). Tiene preguntas para cada socio, tabla de decisiones y resultados esperados. **Fecha límite para responder: lunes 16 de noviembre de 2026.**
-  - Página `respuestas.html` (sección 13 del sitio) y `docs/respuestas-socios.md`: reciben una copia de las respuestas. Hoy todo está en «Por responder»; todavía no se ha copiado nada.
+  - Página `respuestas.html` (sección 13 del sitio) y `docs/respuestas-socios.md`: reciben una copia de las respuestas. Copia del 18 de nov de 2026: respuestas de Gustavo (le llegaron a José por captura de pantalla, sin las preguntas citadas, así que la pregunta a la que responde cada una es una inferencia por confirmar). Javier todavía no responde. **No publicar estas páginas mientras el sitio sea público**: las respuestas incluyen datos del contrato y los planes laborales de Gustavo.
 - **Pendiente:** lo que los socios respondan en el documento compartido. Cuando los tres marquen un tema como acordado, pasarlo a `docs/decisiones.md`.
 - **Pendiente (anterior):** todo lo que la reunión decida. Registrar cada acuerdo en `docs/decisiones.md`.
 
@@ -127,6 +127,17 @@ Estructura de la web comercial según el v2 (sección 11): Inicio · Servicios �
 8. El plan anual aparece como fuente de ingreso y también como idea para más adelante.
 9. Ley 21.719: vigencia el 1 de diciembre de 2026, con una postergación aún no verificada.
 10. El informe lleva datos del cliente, pero los documentos internos usan identificadores.
+
+Observaciones sobre las respuestas de Gustavo (18 de nov de 2026), sin resolver:
+
+11. José corrigió el 14 de nov que Gustavo no trabaja en una tienda de repuestos, y el v2 y el sitio pasaron a decir «tiene otro empleo». Gustavo responde que su contrato es de «vendedor de repuestos». Falta decidir cómo se describe su empleo.
+12. Gustavo tiene cláusulas de exclusividad y cree que alcanzan «cualquiera de las actividades que hace» su empleador; dice que debe volver a leer el contrato. Por verificar con un profesional antes de que opere el negocio.
+13. Sobre las baterías describe subir el precio e incluir la instalación «para que no se vea raro». El v2 pide transparencia con los repuestos (sección 3.2 y principio 7).
+14. Dice que requiere «una gata sí o sí» y no menciona soportes. La regla fija del v2 prohíbe trabajar bajo un vehículo sostenido solo por una gata.
+15. Su lista de costos del precio (hora hombre, traslado y desgaste, publicidad) no incluye costos que el v2 (sección 14) sí lista: repuestos, insumos, comisión de medios de pago, seguro, residuos y contabilidad.
+16. Ya anota las patentes de clientes y les avisa de la revisión técnica: son datos personales (Ley 21.719, por verificar). Ofrece subir a Drive las pautas de cálculo de su empleador: verificar antes si son material confidencial.
+17. Menciona cifras sueltas (20 mil pesos de abono, 200k por una interfaz de escáner, 50 mil por la revisión técnica). Son sus comentarios, no precios ni decisiones.
+18. Dos mensajes quedaron cortados o sin pregunta clara (el de «el kit de» y el de «Lo de arriba si»).
 
 Temas del documento inicial que **no pasaron** al v2 (no recuperarlos sin decisión): modalidad de punto fijo (cochera o bodega por horas), convenios con oficinas y comunidades de edificios, franquicia o método replicable, lista de indicadores semanales, reparto de roles «cuerpo y cerebro» entre dos socios, y la administración del dinero asignada a José.
 

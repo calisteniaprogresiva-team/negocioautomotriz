@@ -2,7 +2,7 @@
 
 Copia de lo que los socios responden en el documento compartido. La página `respuestas.html` del sitio muestra lo mismo.
 
-**Última copia:** ninguna todavía. Fecha límite para responder: lunes 16 de noviembre de 2026.
+**Última copia:** 18 de noviembre de 2026. Respuestas de Gustavo; Javier todavía no responde. Fecha límite para responder: lunes 16 de noviembre de 2026.
 
 Solo para los tres socios: pueden incluir datos de cada persona. No compartir fuera del grupo.
 
@@ -12,9 +12,9 @@ Solo para los tres socios: pueden incluir datos de cada persona. No compartir fu
 
 | Pregunta | Respuesta de Gustavo |
 | --- | --- |
-| ¿Cuántas horas por jornada puedes dedicar? | Por responder |
-| ¿Conoces con anticipación los dos sábados al mes en que trabajas? ¿Con cuánta? | Por responder |
-| ¿Tu contrato tiene cláusulas de exclusividad o de no competencia? Si no lo sabes, ¿puedes revisarlo? | Por responder |
+| ¿Cuántas horas por jornada puedes dedicar? | 1, depende de los autos que se agenden, yo creo que en 2 horas como máximo puedo hacer un mantenimiento (almenos de un vehículo gasolina), podría hacer quizás de 2-3 por día dependiendo de qué tan lejos estén y su complejidad. |
+| ¿Conoces con anticipación los dos sábados al mes en que trabajas? ¿Con cuánta? | Si ya tengo establecidos todos los sábados de aquí a que renuncie jaja |
+| ¿Tu contrato tiene cláusulas de exclusividad o de no competencia? Si no lo sabes, ¿puedes revisarlo? | Si tiene cláusulas de exclusividad, pero mi contrato es de vendedor de repuestos nomás , pero tendría que volver a leerla porque creo que dice en cualquiera de las actividades que hace Bruno |
 
 ### Evaluación de los servicios de la primera etapa
 
@@ -38,6 +38,33 @@ Solo para los tres socios: pueden incluir datos de cada persona. No compartir fu
 | Lista final de condiciones del lugar al reservar (superficie plana y firme, espacio, ventilación e iluminación, fuera de la vía pública, permiso del edificio) | Por responder |
 | ¿Dónde se guardan entre servicios el aceite usado, los filtros y las baterías, y qué gestor autorizado los retira? (Por verificar con un profesional) | Por responder |
 | ¿En qué vehículo se trasladan herramientas y repuestos, y quién cubre el costo? | Por responder |
+
+### Otras respuestas de Gustavo, recibidas como texto libre
+
+Llegaron el 18 de noviembre de 2026 en una captura de pantalla, sin las preguntas citadas. Se copian en el orden recibido, sin cambios. Las respuestas 1 a 3 están en Disponibilidad. La tercera columna indica a qué parece responder cada una y debe confirmarse con Gustavo.
+
+| N.º | Respuesta de Gustavo (textual) | Parece responder a (por confirmar) |
+| --- | --- | --- |
+| 4 | Cuando estudiaba, nos enseñaban cómo a calcular esto, y así también es como aplica Bruno sus cosas de echo yo hago parte de las pautas, podría subirla a drive y compartirlas | Cálculo de precios y costos (no queda claro a cuál pregunta responde) |
+| 5 | Sobre los pilares si agregaría otros: Creo que no por el momento, porque la transparencia está dentro del primer punto | Los cinco pilares (v2, sección 1.1) |
+| 6 | Lo que suele desconfiar la gente, es cuando el mecánico se demora, no entrega los repuestos, “hace” la reparación y queda igual | Pilar de confianza o hipótesis 3 (v2, sección 1) |
+| 7 | Por así decirlo se tiene que establecer el precio de<br>Hora hombre (cuánto me tarde en hacer x cosa (mantención, correctivo (frenos y eso))<br>El traslado y el desgaste de las herramientas (incluido el auto)<br>Costos de publicidad si hacemos<br>Y creo que eso, ya que no pagaríamos arriendo ni otras cosas | Cálculo del precio y costos (v2, sección 14) |
+| 8 | Otra forma de ganar dinero es con los repuestos<br>Por lo general al comprar por mayor te hacen precio<br>Entonces ejemplo comprar para la mantención de 10 Toyota, ofrecer una promoción y vender o el servicio o el kit de | Fuentes de ingreso: venta de repuestos (v2, sección 3.2). El mensaje termina cortado en «el kit de» |
+| 9 | Cuando decía la complejidad, es porque hay autos que el filtro de aire se cambi abriendo los seguros y ya, hay otros donde hay que sacar todo literal el porta filtro y afuera abrirlo con pernos especiales (torx) y cambiarlo, no es complejo tampoco pero de algo que tarda 1-3 min a algo que tarda 7-10 min, por el momento cualquiera de las cosas que abarcan una mantención (aceite, cambio de filtros) si se puede. | Servicios de filtros y tiempo real de trabajo |
+| 10 | Lo de arriba si, pero no sabría cuánto cobrar, por lo general aveces esos servicios no se 20 mil pesos, y si hay que hacer alguna reparación esos 20 mil sirven de abono | Un servicio de la primera etapa, probablemente la inspección visual preventiva (por confirmar) |
+| 11 | Y las bujías, si depende del vehículo, por ejemplo no le cambiaría bujías a un Subaru | Cambio de bujías |
+| 12 | Si todo el rato, tengo contactos para comprar baterías, por lo general se eleva el precio y se incluye la instalación para que no se vea raro | Revisión y cambio de batería |
+| 13 | Para poder vender baterías si se requiere de una herramienta que mide el % de vida útil que le queda y la capacidad de arranque | Revisión y cambio de batería |
+| 14 | Ideal que pueda dar vaucher, Para que el cliente tenga el respaldo | Informe para el cliente o garantía (por confirmar) |
+| 15 | Cambio de frenos en general si | Cambio de pastillas y frenos (etapa 2 en el v2) |
+| 16 | Para scanear se necesita un scanner, hay uno que venden la interfase (lo que se conecta al auto) como por 200k y desde un teléfono/tablet Android se descarga la app y sirve como scanner | Lectura de códigos con escáner OBD (etapa 2 en el v2) |
+| 17 | Para hacer este tipo de trabajos requiero de una gata si o si, porque siempre me consigo | Equipo de elevación y apoyo |
+| 18 | Encuentro bacan el punto 2, porque mientras más veces hagamos un auto, más rápido lo haremos después, que estén pautadas 2 horas y nos demoremos menos es más plata jaja(regla de crecimiento) | Regla de crecimiento (v2, sección 4.4) |
+| 19 | Por lo general yo anoto las patentes de la gente a la que les he visto los autos, y les aviso también por la revisión técnica, no sé si la gente pague lo que se cobra (50 mil app) | Fidelización y recordatorios (v2, sección 9) |
+| 20 | En mi empresa se pegan unos sticker con qr que dice agenda tu mantención y le ponen el kilometraje cuando debería ser | Fidelización y recordatorios (v2, sección 9) |
+| 21 | Yo encuentro que están bien los puntos, por el momento, también el tema de poder meter nuestro vehículo y las herramientas | Condiciones del lugar al reservar (v2, sección 6.2) |
+| 22 | aquí tengo dudas, porque si no se cobra reserva, existe la probabilidad de que el cliente nos deje con los repuestos comprados, pero también podría no confiar no se | Medios de pago y anticipo para reservar |
+| 23 | Yo ya traje los cuadrados plásticos para usar de base debajo de los vehículos para trabajar más cómodamente. | Inventario de herramientas |
 
 ## Javier Cañi
 
