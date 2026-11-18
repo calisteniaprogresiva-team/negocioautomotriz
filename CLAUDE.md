@@ -34,6 +34,7 @@ No hay porcentajes, aportes ni responsabilidades definitivas. **Nunca** los asum
   - Maqueta de la web con variantes de color: https://claude.ai/artifact/YUwsxaZBiq5dvKd9AAK8xt (privada).
   - Documento compartido para completar entre socios, porque no habrá reunión presencial: https://claude.ai/artifact/Thrjf7DfTbAQ866S2FGLM4 (privado hasta que José lo comparta). Tiene preguntas para cada socio, tabla de decisiones y resultados esperados. **Fecha límite para responder: lunes 16 de noviembre de 2026.**
   - Página `respuestas.html` (sección 13 del sitio) y `docs/respuestas-socios.md`: reciben una copia de las respuestas. Copia del 18 de nov de 2026: respuestas de Gustavo (le llegaron a José por captura de pantalla, sin las preguntas citadas, así que la pregunta a la que responde cada una se dedujo de 9 capturas de lo que Gustavo estaba leyendo en el sitio, con su hora; los mensajes 4 a 8, 14, 17 y 23 siguen por confirmar). Javier todavía no responde. **No publicar estas páginas mientras el sitio sea público**: las respuestas incluyen datos del contrato y los planes laborales de Gustavo.
+  - Web de pre-lanzamiento, vista previa privada (solo José): https://claude.ai/artifact/UCekWY4M2JbhnKtz6pcE29. Sin precios, sin formularios, contacto solo por WhatsApp con mensaje prellenado. Pendientes antes de publicar: nombre comercial, número de WhatsApp, comunas, política de privacidad, color definitivo, fotos reales con permiso, y revisar que los pasos de «Cómo funciona» y los textos sean aprobados por los tres.
 - **Pendiente:** lo que los socios respondan en el documento compartido. Cuando los tres marquen un tema como acordado, pasarlo a `docs/decisiones.md`.
 - **Pendiente (anterior):** todo lo que la reunión decida. Registrar cada acuerdo en `docs/decisiones.md`.
 
@@ -98,7 +99,8 @@ Cada entregable va en su propia carpeta. Antes de empezar uno, revisa en qué et
 | Modelo de datos (clientes, vehículos, tenencias, solicitudes, cotizaciones, OT, repuestos, pagos) | `sistemas/` | Etapa 2 | Propuesta: Google Sheets + AppSheet, por aprobar |
 | Plantilla del informe al cliente | `sistemas/` | Etapa 2 | Estructura en v2, sección 8 |
 | Maqueta de prueba de la web comercial (variantes A morado y B azul acero, cambia con #morado / #azul) | `web/maqueta/index.html` | Antes de la etapa 1 | Hecha; publicada como página privada para comparar en la reunión |
-| Página web comercial | `web/` | Etapa 3 en adelante | **No publicar** antes de validar capacidad, precios y cobertura |
+| Web de pre-lanzamiento (una página: cupos de prueba por WhatsApp, sin precios ni formularios) | `web/pre-lanzamiento/index.html` | Etapa 3 (prueba controlada) | Hecha como vista previa privada; **no publicar** hasta tener nombre, número de WhatsApp, comunas y política de privacidad, y que Gustavo apruebe lo que se ofrece. Las instrucciones para publicar están en un comentario al inicio del archivo |
+| Página web comercial completa | `web/` | Etapa 3 en adelante | **No publicar** antes de validar capacidad, precios y cobertura |
 | Portal del cliente | `portal/` | Etapa 5 (Crecimiento) | Solo idea; no construir sin decisión |
 | Brief de diseño y prompt para probar la web en Claude Design (variantes morado y azul acero) | `marca/brief-diseno-web.md` | Antes de la etapa 1 | Hecho; la decisión de color es de los tres |
 | Identidad: logo, tarjetas, uniforme | `marca/` | Cuando haya nombre | Pendiente del nombre |

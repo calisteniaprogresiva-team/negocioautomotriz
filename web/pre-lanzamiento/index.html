@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- ANTES DE PUBLICAR: 1) quitar esta línea noindex; 2) reemplazar NUMERO_WHATSAPP (2 enlaces) y [Nombre por definir];
+     3) quitar la cinta «Vista previa» y los avisos amarillos de pendiente; 4) elegir una sola variante de color. -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Mantención de tu auto a domicilio en Santiago, con historial, informe de cada trabajo y recordatorio de la próxima mantención. Cupos de prueba por WhatsApp.">
+<title>Mecánica a domicilio en Santiago · Cupos de prueba</title>
+<style>
+/* Idea de diseño: placas de taller sobre carbón, con pernos en las esquinas. El amarillo solo marca lo pendiente. */
+:root {
+  color-scheme: dark;
+  --fondo: #141417;
+  --panel: #1d1d22;
+  --linea: #34343c;
+  --texto: #ffffff;
+  --texto-2: #aeb3bc;
+  --marca: #5b2a86;
+  --marca-claro: #cfaef5;
+  --aviso: #ffb000;
+  --fuente-titulo: "Bahnschrift SemiBold Condensed", Bahnschrift, "Avenir Next Condensed", "Roboto Condensed", "sans-serif-condensed", "Arial Narrow", sans-serif;
+  --fuente-texto: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+:root:has(#azul:target) { --marca: #1d4f6e; --marca-claro: #8cc7e3; --panel: #1b1d21; --linea: #32363d; }
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { margin: 0; background: var(--fondo); color: var(--texto); font-family: var(--fuente-texto); font-size: 1rem; line-height: 1.55; }
+.ancla { position: absolute; top: 0; }
+a { color: var(--marca-claro); }
+a:focus-visible, .boton:focus-visible, summary:focus-visible { outline: 3px solid var(--marca-claro); outline-offset: 3px; }
+h1, h2, h3 { font-family: var(--fuente-titulo); font-stretch: condensed; font-weight: 700; line-height: 1.05; text-transform: uppercase; letter-spacing: .01em; text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(2.2rem, 8vw, 3.3rem); }
+h2 { font-size: clamp(1.8rem, 6vw, 2.6rem); }
+h3 { font-size: 1.3rem; }
+p { margin: 0; max-width: 65ch; }
+.envoltura { width: 100%; max-width: 72rem; margin: 0 auto; padding: 0 1.1rem; }
+.seccion { padding: 3.5rem 0; border-top: 1px solid var(--linea); }
+.seccion > .envoltura { display: grid; gap: 1.6rem; }
+.antetitulo { font-family: var(--fuente-titulo); font-stretch: condensed; text-transform: uppercase; letter-spacing: .12em; font-size: .85rem; color: var(--marca-claro); }
+.cabeza { display: grid; gap: .6rem; }
+.cabeza p { color: var(--texto-2); }
+
+/* Vista previa (se quita al publicar) */
+.cinta { background: repeating-linear-gradient(135deg, var(--aviso) 0 14px, #141417 14px 28px); padding: 4px 0; }
+.cinta .envoltura { background: var(--aviso); color: #141417; display: flex; flex-wrap: wrap; gap: .5rem 1rem; align-items: center; justify-content: space-between; padding-top: .45rem; padding-bottom: .45rem; font-weight: 700; font-size: .85rem; }
+.selector { display: flex; gap: .4rem; flex-wrap: wrap; }
+.selector a { color: #141417; text-decoration: none; border: 2px solid #141417; border-radius: 4px; padding: .1rem .55rem; font-weight: 700; }
+.selector a[href="#morado"] { background: #141417; color: var(--aviso); }
+:root:has(#azul:target) .selector a[href="#morado"] { background: transparent; color: #141417; }
+:root:has(#azul:target) .selector a[href="#azul"] { background: #141417; color: var(--aviso); }
+
+/* Cabecera */
+.cabecera .envoltura { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-top: 1rem; padding-bottom: 1rem; }
+.logo { display: flex; align-items: center; gap: .6rem; font-family: var(--fuente-titulo); font-stretch: condensed; font-weight: 700; text-transform: uppercase; font-size: 1.15rem; letter-spacing: .04em; }
+.logo svg { flex: none; }
+.cabecera nav { display: none; gap: 1.2rem; font-size: .95rem; }
+.cabecera nav a { color: var(--texto-2); text-decoration: none; }
+.cabecera nav a:hover { color: var(--texto); }
+@media (min-width: 52rem) { .cabecera nav { display: flex; } }
+
+/* Botones */
+.botones { display: flex; flex-wrap: wrap; gap: .8rem; align-items: center; }
+.boton { display: inline-flex; align-items: center; justify-content: center; min-height: 3.1rem; padding: .7rem 1.4rem; border-radius: 4px; border: 2px solid var(--marca); background: var(--marca); color: #fff; font-family: var(--fuente-titulo); font-stretch: condensed; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; font-size: 1.1rem; text-decoration: none; }
+.boton.secundario { background: transparent; color: var(--texto); border-color: var(--linea); }
+.etq { display: inline-block; width: fit-content; font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; padding: .15rem .5rem; border-radius: 3px; background: var(--aviso); color: #141417; }
+.etq.borde { background: transparent; color: var(--aviso); border: 1px solid var(--aviso); }
+
+/* Placas con pernos */
+.placa { position: relative; background: linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,0) 40%), var(--panel); border: 1px solid var(--linea); border-radius: 6px; padding: 1.4rem 1.2rem; }
+.placa::before, .placa::after { content: ""; position: absolute; top: 9px; width: 7px; height: 7px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #8a8f98, #3a3d44); }
+.placa::before { left: 9px; }
+.placa::after { right: 9px; }
+
+/* Portada */
+.portada { padding: 2.5rem 0 3.2rem; }
+.portada .envoltura { display: grid; gap: 2.2rem; }
+@media (min-width: 56rem) { .portada .envoltura { grid-template-columns: 1.25fr 1fr; align-items: center; } }
+.portada-texto { display: grid; gap: 1.2rem; }
+.portada-texto p { color: var(--texto-2); font-size: 1.12rem; }
+.franja { width: 4.5rem; height: 6px; background: var(--marca-claro); }
+.ficha { display: grid; gap: .9rem; }
+.ficha-cabeza { display: flex; justify-content: space-between; align-items: baseline; gap: .5rem; flex-wrap: wrap; padding-top: .4rem; }
+.ficha-cabeza strong { font-family: var(--fuente-titulo); font-stretch: condensed; text-transform: uppercase; font-size: 1.25rem; letter-spacing: .04em; }
+.codigo { font-family: ui-monospace, "SFMono-Regular", Consolas, monospace; font-size: .85rem; color: var(--marca-claro); font-variant-numeric: tabular-nums; }
+.ficha ol { list-style: none; margin: 0; padding: 0; display: grid; gap: .55rem; }
+.ficha li { display: grid; grid-template-columns: auto 1fr; gap: .2rem .8rem; padding: .7rem .8rem; border-left: 3px solid var(--marca-claro); background: rgba(255,255,255,.03); }
+.ficha li span:last-child { grid-column: 2; color: var(--texto-2); font-size: .9rem; }
+.ficha .proxima { border-left-color: var(--aviso); }
+
+/* Franja de etapa de prueba */
+.prueba { background: var(--marca); }
+.prueba .envoltura { display: flex; flex-wrap: wrap; gap: .4rem 1.2rem; align-items: center; padding-top: .9rem; padding-bottom: .9rem; }
+.prueba strong { font-family: var(--fuente-titulo); font-stretch: condensed; text-transform: uppercase; letter-spacing: .06em; font-size: 1.1rem; }
+
+/* Beneficios */
+.rejilla { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); }
+.beneficio { display: grid; gap: .5rem; align-content: start; }
+.beneficio .icono { width: 2.6rem; height: 2.6rem; border-radius: 4px; background: var(--marca); display: grid; place-items: center; margin-top: .4rem; }
+.beneficio p { color: var(--texto-2); font-size: .97rem; }
+
+/* Pasos */
+.pasos { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); counter-reset: paso; }
+.pasos li { counter-increment: paso; display: grid; gap: .4rem; padding: 1rem; border: 1px solid var(--linea); border-radius: 6px; background: var(--panel); align-content: start; }
+.pasos li::before { content: counter(paso); font-family: var(--fuente-titulo); font-stretch: condensed; font-weight: 700; font-size: 2.4rem; line-height: 1; color: var(--marca-claro); }
+.pasos li strong { font-family: var(--fuente-titulo); font-stretch: condensed; text-transform: uppercase; font-size: 1.15rem; letter-spacing: .03em; }
+.pasos li span { color: var(--texto-2); font-size: .93rem; }
+
+/* Servicios */
+.servicios { list-style: none; margin: 0; padding: 0; display: grid; gap: .7rem; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); }
+.servicios li { display: flex; justify-content: space-between; align-items: center; gap: .8rem; padding: .9rem 1rem; border: 1px solid var(--linea); border-left: 4px solid var(--marca-claro); border-radius: 4px; background: var(--panel); font-weight: 600; }
+.nota { border-left: 4px solid var(--aviso); padding: .9rem 1rem; background: rgba(255,176,0,.07); }
+
+/* Informe */
+.dos-col { display: grid; gap: 1.4rem; }
+@media (min-width: 52rem) { .dos-col { grid-template-columns: 1fr 1fr; align-items: start; } }
+.informe { background: #f4f4f6; color: #141417; border-radius: 4px; padding: 1.2rem; display: grid; gap: .9rem; position: relative; overflow: hidden; }
+.informe::after { content: "EJEMPLO"; position: absolute; right: -1rem; bottom: 1.2rem; transform: rotate(-18deg); font-family: var(--fuente-titulo); font-stretch: condensed; font-weight: 700; font-size: 3.4rem; color: rgba(20,20,23,.07); pointer-events: none; }
+.informe-cabeza { display: flex; justify-content: space-between; gap: .5rem; flex-wrap: wrap; border-bottom: 3px solid var(--marca); padding-bottom: .6rem; }
+.informe-cabeza strong { font-family: var(--fuente-titulo); font-stretch: condensed; text-transform: uppercase; font-size: 1.15rem; }
+.informe-cabeza span { font-family: ui-monospace, Consolas, monospace; font-size: .8rem; }
+.informe-bloques { display: grid; gap: .6rem; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); }
+.informe-bloques div { border: 1px solid #c9ccd2; border-radius: 3px; padding: .6rem .7rem; display: grid; gap: .2rem; }
+.informe-bloques b { font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; }
+.informe-bloques span { font-size: .88rem; color: #4a4d55; }
+.informe-bloques .atencion { border-color: #b37a00; background: #fff6df; }
+.informe small { color: #4a4d55; }
+.lista-chequeo { list-style: none; margin: 0; padding: 0; display: grid; gap: .6rem; }
+.lista-chequeo li { display: grid; grid-template-columns: 1.4rem 1fr; gap: .6rem; align-items: start; }
+.lista-chequeo li::before { content: ""; width: 1.1rem; height: 1.1rem; margin-top: .2rem; border: 2px solid var(--marca-claro); border-radius: 3px; }
+.apilado { display: grid; gap: 1rem; }
+
+/* Preguntas */
+.preguntas { display: grid; gap: .7rem; }
+details { border: 1px solid var(--linea); border-radius: 6px; background: var(--panel); }
+summary { cursor: pointer; padding: 1rem 1.1rem; font-weight: 700; list-style: none; display: flex; justify-content: space-between; gap: 1rem; align-items: center; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; font-size: 1.5rem; line-height: 1; color: var(--marca-claro); flex: none; }
+details[open] summary::after { content: "\2212"; }
+details p { padding: 0 1.1rem 1.1rem; color: var(--texto-2); }
+
+/* Cierre */
+.cierre .envoltura { display: grid; gap: 1.2rem; justify-items: start; }
+.cierre .placa { width: 100%; display: grid; gap: 1.2rem; padding: 2rem 1.4rem; }
+.cierre p { color: var(--texto-2); }
+
+.pie { border-top: 1px solid var(--linea); padding: 2rem 0 2.5rem; color: var(--texto-2); font-size: .88rem; }
+.pie .envoltura { display: grid; gap: .5rem; }
+</style>
+</head>
+<body>
+<span id="morado" class="ancla"></span>
+<span id="azul" class="ancla"></span>
+
+<div class="cinta" role="note">
+  <div class="envoltura">
+    <span>Vista previa. No está publicada.</span>
+    <span class="selector" aria-label="Variante de color">
+      <a href="#morado">A · Morado</a>
+      <a href="#azul">B · Azul acero</a>
+    </span>
+  </div>
+</div>
+
+<header class="cabecera">
+  <div class="envoltura">
+    <div class="logo">
+      <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true">
+        <rect x="1" y="1" width="30" height="30" rx="4" fill="var(--marca)"/>
+        <path d="M21.5 6.5a5.5 5.5 0 0 0-5.3 7l-8.4 8.4a2 2 0 1 0 2.8 2.8l8.4-8.4a5.5 5.5 0 0 0 7-5.3l-3 3-3-1-1-3z" fill="#ffffff"/>
+      </svg>
+      [Nombre por definir]
+    </div>
+    <nav aria-label="Secciones">
+      <a href="#como-funciona">Cómo funciona</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#informe">Tu informe</a>
+      <a href="#preguntas">Preguntas</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="portada" aria-labelledby="titulo">
+    <div class="envoltura">
+      <div class="portada-texto">
+        <span class="antetitulo">Mecánica a domicilio · Santiago</span>
+        <div class="franja" aria-hidden="true"></div>
+        <h1 id="titulo">La mantención de tu auto, en tu casa y con todo por escrito</h1>
+        <p>Reservas con anticipación, vamos al lugar que elijas y recibes un informe de lo que se hizo, con fotos. Tu auto queda con su historial y te avisamos cuándo toca la próxima mantención.</p>
+        <div class="botones">
+          <a class="boton" href="https://wa.me/NUMERO_WHATSAPP?text=Hola%2C%20quiero%20pedir%20un%20cupo%20de%20prueba.%0AMi%20auto%20es%20(marca%2C%20modelo%20y%20a%C3%B1o)%3A%20%0AMi%20comuna%3A%20">Pedir un cupo de prueba</a>
+          <a class="boton secundario" href="#como-funciona">Ver cómo funciona</a>
+          <span class="etq borde">WhatsApp: número por definir</span>
+        </div>
+      </div>
+
+      <aside class="placa ficha" aria-label="Ejemplo del historial de un vehículo">
+        <div class="ficha-cabeza">
+          <strong>Historial de tu auto</strong>
+          <span class="codigo">VEH-0001</span>
+        </div>
+        <ol>
+          <li><span class="codigo">OT-0001</span><span>Cambio de aceite y filtro de aceite</span><span>[fecha] · [kilometraje] · informe entregado</span></li>
+          <li><span class="codigo">OT-0002</span><span>Inspección visual preventiva</span><span>[fecha] · [kilometraje] · 2 observaciones</span></li>
+          <li class="proxima"><span class="codigo">PRÓX.</span><span>Próxima mantención</span><span>Por fecha o kilometraje, según el fabricante</span></li>
+        </ol>
+        <span class="etq borde">Datos de ejemplo</span>
+      </aside>
+    </div>
+  </section>
+
+  <div class="prueba">
+    <div class="envoltura">
+      <strong>Etapa de prueba</strong>
+      <span>Atendemos a un grupo reducido de clientes, solo los fines de semana y con reserva anticipada.</span>
+    </div>
+  </div>
+
+  <section class="seccion" aria-labelledby="t-beneficios">
+    <div class="envoltura">
+      <div class="cabeza">
+        <span class="antetitulo">Por qué elegirnos</span>
+        <h2 id="t-beneficios">Menos vueltas, más claridad</h2>
+        <p>Pensamos el servicio para quien no tiene tiempo de ir al taller y quiere saber exactamente qué le hacen a su auto.</p>
+      </div>
+      <div class="rejilla">
+        <article class="placa beneficio">
+          <span class="icono" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>
+          <h3>Sin ir al taller</h3>
+          <p>Vamos a tu casa o a tu trabajo, en el horario que reservaste. Tú sigues con tu día.</p>
+        </article>
+        <article class="placa beneficio">
+          <span class="icono" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span>
+          <h3>Precio cerrado antes de empezar</h3>
+          <p>Te cotizamos por servicio y por vehículo. Si aparece algo más, te lo explicamos y solo se hace si tú lo autorizas.</p>
+        </article>
+        <article class="placa beneficio">
+          <span class="icono" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="12" cy="12" r="3.5"/></svg></span>
+          <h3>Informe con fotos</h3>
+          <p>Recibes qué se hizo, qué se revisó, qué requiere atención y qué se recomienda. Con fotos del antes y el después.</p>
+        </article>
+        <article class="placa beneficio">
+          <span class="icono" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7v5l3 2"/><circle cx="12" cy="12" r="9"/></svg></span>
+          <h3>Historial y recordatorio</h3>
+          <p>Cada trabajo queda registrado en la ficha de tu auto. Te avisamos cuándo toca la siguiente mantención.</p>
+        </article>
+        <article class="placa beneficio">
+          <span class="icono" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
+          <h3>Seguridad primero</h3>
+          <p>Si el lugar no es seguro para trabajar, no agendamos. Y no hacemos un servicio que no podamos hacer bien.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion" id="como-funciona" aria-labelledby="t-como">
+    <div class="envoltura">
+      <div class="cabeza">
+        <span class="antetitulo">Cómo funciona</span>
+        <h2 id="t-como">De tu mensaje al recordatorio</h2>
+      </div>
+      <ol class="pasos">
+        <li><strong>Nos escribes</strong><span>Por WhatsApp, con la marca, el modelo y el año de tu auto y tu comuna.</span></li>
+        <li><strong>Revisamos</strong><span>Confirmamos que el trabajo se puede hacer bien a domicilio.</span></li>
+        <li><strong>Te cotizamos</strong><span>Recibes un precio cerrado con repuestos y condiciones. Aceptas y reservas.</span></li>
+        <li><strong>Confirmamos</strong><span>Dirección, fecha, rango horario y condiciones del lugar.</span></li>
+        <li><strong>Hacemos el trabajo</strong><span>Registramos kilometraje, fotos y repuestos instalados.</span></li>
+        <li><strong>Te informamos</strong><span>Recibes el informe, tu auto queda en su historial y programamos el recordatorio.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="seccion" id="servicios" aria-labelledby="t-servicios">
+    <div class="envoltura">
+      <div class="cabeza">
+        <span class="antetitulo">Servicios</span>
+        <h2 id="t-servicios">Empezamos con lo simple</h2>
+        <p>Estos son los primeros servicios que estamos preparando. Antes de ofrecer cada uno, nuestra dirección técnica lo evalúa y lo aprueba. Escríbenos y te decimos cuáles ya están disponibles.</p>
+      </div>
+      <ul class="servicios">
+        <li>Cambio de aceite y filtro de aceite <span class="etq">En evaluación</span></li>
+        <li>Cambio de filtro de aire <span class="etq">En evaluación</span></li>
+        <li>Cambio de filtro de habitáculo <span class="etq">En evaluación</span></li>
+        <li>Inspección visual preventiva <span class="etq">En evaluación</span></li>
+        <li>Cambio de bujías <span class="etq">En evaluación</span></li>
+        <li>Revisión y cambio de batería <span class="etq">En evaluación</span></li>
+      </ul>
+      <p class="nota">Reparaciones grandes, como embragues, o trabajos que necesitan elevador, soldadura o desarme grande no se hacen a domicilio. Las derivamos a talleres colaboradores.</p>
+    </div>
+  </section>
+
+  <section class="seccion" id="informe" aria-labelledby="t-informe">
+    <div class="envoltura dos-col">
+      <div class="cabeza">
+        <span class="antetitulo">Tu informe</span>
+        <h2 id="t-informe">Sabes qué se hizo y qué no</h2>
+        <p>Después de cada servicio recibes un informe revisado por nuestra dirección técnica. Separa con claridad lo que se hizo, lo que se revisó y lo que queda pendiente. Una inspección visual nunca se presenta como un diagnóstico mecánico completo.</p>
+      </div>
+      <article class="informe" aria-label="Miniatura de un informe de ejemplo">
+        <div class="informe-cabeza">
+          <strong>Informe del servicio</strong>
+          <span>OT-0001 · CLI-0001 · VEH-0001</span>
+        </div>
+        <div class="informe-bloques">
+          <div><b>Trabajos realizados</b><span>Cambio de aceite y filtro de aceite</span></div>
+          <div><b>Elementos inspeccionados</b><span>Niveles, luces, neumáticos, escobillas</span></div>
+          <div class="atencion"><b>Requiere atención</b><span>[Observación técnica de ejemplo]</span></div>
+          <div><b>Recomendado, no ejecutado</b><span>[Trabajo recomendado de ejemplo]</span></div>
+        </div>
+        <small>Informe de ejemplo con datos ficticios.</small>
+      </article>
+    </div>
+  </section>
+
+  <section class="seccion" aria-labelledby="t-lugar">
+    <div class="envoltura dos-col">
+      <div class="apilado">
+        <div class="cabeza">
+          <span class="antetitulo">Antes de agendar</span>
+          <h2 id="t-lugar">El lugar importa</h2>
+          <p>Te lo preguntamos al reservar. Si no se cumple, no agendamos, porque la seguridad va primero.</p>
+        </div>
+        <ul class="placa lista-chequeo">
+          <li>Superficie plana y firme</li>
+          <li>Espacio alrededor del vehículo</li>
+          <li>Ventilación e iluminación</li>
+          <li>Fuera de la vía pública</li>
+          <li>Permiso del edificio o comunidad, si corresponde</li>
+        </ul>
+      </div>
+      <div class="apilado">
+        <div class="cabeza">
+          <span class="antetitulo">Cobertura</span>
+          <h2>Santiago</h2>
+          <p>Atendemos en Santiago y comunas cercanas. Escríbenos tu comuna y te confirmamos si llegamos.</p>
+        </div>
+        <span class="etq borde">Comunas de la etapa de prueba: por definir</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion" id="preguntas" aria-labelledby="t-preguntas">
+    <div class="envoltura">
+      <div class="cabeza">
+        <span class="antetitulo">Preguntas frecuentes</span>
+        <h2 id="t-preguntas">Lo que suelen preguntarnos</h2>
+      </div>
+      <div class="preguntas">
+        <details><summary>¿Cuánto cuesta?</summary><p>El precio se cierra por servicio y por vehículo antes de empezar, y lo cotizamos por WhatsApp. No se hace ningún trabajo adicional sin que lo autorices.</p></details>
+        <details><summary>¿Qué días atienden?</summary><p>Por ahora, solo fines de semana y con reserva anticipada. No atendemos urgencias.</p></details>
+        <details><summary>¿Dónde se hace el trabajo?</summary><p>En tu casa o en tu trabajo, siempre que el lugar cumpla las condiciones de seguridad que te indicamos al reservar.</p></details>
+        <details><summary>¿Qué pasa si aparece otra falla?</summary><p>Te la informamos, te cotizamos y solo se hace si tú lo autorizas. Queda anotada en tu informe.</p></details>
+        <details><summary>¿Qué datos necesitan para cotizar?</summary><p>Marca, modelo, año y versión de tu auto, el kilometraje aproximado y tu comuna. Los pedimos por WhatsApp; esta página no guarda datos.</p></details>
+        <details><summary>¿Y si después del servicio hay un problema?</summary><p>Escríbenos. Registramos tu caso, lo revisa nuestra dirección técnica y te informamos qué corresponde hacer.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion cierre" id="cupo" aria-labelledby="t-cupo">
+    <div class="envoltura">
+      <div class="placa">
+        <h2 id="t-cupo">Pide tu cupo de prueba</h2>
+        <p>Cuéntanos qué auto tienes y en qué comuna estás. Te respondemos por WhatsApp y vemos juntos si podemos atenderte.</p>
+        <div class="botones">
+          <a class="boton" href="https://wa.me/NUMERO_WHATSAPP?text=Hola%2C%20quiero%20pedir%20un%20cupo%20de%20prueba.%0AMi%20auto%20es%20(marca%2C%20modelo%20y%20a%C3%B1o)%3A%20%0AMi%20comuna%3A%20">Escribir por WhatsApp</a>
+          <span class="etq borde">Número por definir</span>
+        </div>
+        <p><span class="etq borde">Política de privacidad: por redactar</span></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pie">
+  <div class="envoltura">
+    <span>[Nombre por definir] · Mecánica automotriz a domicilio · Santiago</span>
+    <span>Etapa de prueba. Atención los fines de semana, con reserva anticipada.</span>
+  </div>
+</footer>
+</body>
+</html>
