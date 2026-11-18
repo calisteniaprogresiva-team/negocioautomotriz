@@ -137,7 +137,9 @@ Observaciones sobre las respuestas de Gustavo (18 de nov de 2026), sin resolver:
 15. Su lista de costos del precio (hora hombre, traslado y desgaste, publicidad) no incluye costos que el v2 (sección 14) sí lista: repuestos, insumos, comisión de medios de pago, seguro, residuos y contabilidad.
 16. Ya anota las patentes de clientes y les avisa de la revisión técnica: son datos personales (Ley 21.719, por verificar). Ofrece subir a Drive las pautas de cálculo de su empleador: verificar antes si son material confidencial.
 17. Menciona cifras sueltas (20 mil pesos de abono, 200k por una interfaz de escáner, 50 mil por la revisión técnica). Son sus comentarios, no precios ni decisiones.
-18. Un mensaje quedó cortado («el kit de»). El de «Lo de arriba si» se leyó como inspección visual preventiva, según la captura de las 3:48 p. m.
+18. Un mensaje quedó cortado («el kit de»); José indicó que sigue «kit de embrague» (por confirmar con Gustavo). El de «Lo de arriba si» se leyó como inspección visual preventiva, según la captura de las 3:48 p. m.
+
+19. Gustavo propone como ejemplo vender un kit de embrague en promoción. El v2 (sección 4.3) dice que los embragues se derivan a talleres colaboradores desde el inicio.
 
 Temas del documento inicial que **no pasaron** al v2 (no recuperarlos sin decisión): modalidad de punto fijo (cochera o bodega por horas), convenios con oficinas y comunidades de edificios, franquicia o método replicable, lista de indicadores semanales, reparto de roles «cuerpo y cerebro» entre dos socios, y la administración del dinero asignada a José.
 
