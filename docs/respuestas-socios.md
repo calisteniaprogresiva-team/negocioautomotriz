@@ -41,30 +41,30 @@ Solo para los tres socios: pueden incluir datos de cada persona. No compartir fu
 
 ### Otras respuestas de Gustavo, recibidas como texto libre
 
-Llegaron el 18 de noviembre de 2026 en una captura de pantalla, sin las preguntas citadas. Se copian en el orden recibido, sin cambios. Las respuestas 1 a 3 están en Disponibilidad. La tercera columna indica a qué parece responder cada una y debe confirmarse con Gustavo.
+Llegaron el 18 de noviembre de 2026 en una captura de pantalla, sin las preguntas citadas. Se copian en el orden recibido, sin cambios. Las respuestas 1 a 3 están en Disponibilidad. La tercera columna indica a qué parece responder cada una, según las capturas de pantalla de la parte del sitio que Gustavo estaba leyendo (con la hora de la captura). Lo marcado «sin captura» o «por confirmar» debe confirmarse con Gustavo.
 
 | N.º | Respuesta de Gustavo (textual) | Parece responder a (por confirmar) |
 | --- | --- | --- |
-| 4 | Cuando estudiaba, nos enseñaban cómo a calcular esto, y así también es como aplica Bruno sus cosas de echo yo hago parte de las pautas, podría subirla a drive y compartirlas | Cálculo de precios y costos (no queda claro a cuál pregunta responde) |
-| 5 | Sobre los pilares si agregaría otros: Creo que no por el momento, porque la transparencia está dentro del primer punto | Los cinco pilares (v2, sección 1.1) |
-| 6 | Lo que suele desconfiar la gente, es cuando el mecánico se demora, no entrega los repuestos, “hace” la reparación y queda igual | Pilar de confianza o hipótesis 3 (v2, sección 1) |
-| 7 | Por así decirlo se tiene que establecer el precio de<br>Hora hombre (cuánto me tarde en hacer x cosa (mantención, correctivo (frenos y eso))<br>El traslado y el desgaste de las herramientas (incluido el auto)<br>Costos de publicidad si hacemos<br>Y creo que eso, ya que no pagaríamos arriendo ni otras cosas | Cálculo del precio y costos (v2, sección 14) |
-| 8 | Otra forma de ganar dinero es con los repuestos<br>Por lo general al comprar por mayor te hacen precio<br>Entonces ejemplo comprar para la mantención de 10 Toyota, ofrecer una promoción y vender o el servicio o el kit de | Fuentes de ingreso: venta de repuestos (v2, sección 3.2). El mensaje termina cortado en «el kit de» |
-| 9 | Cuando decía la complejidad, es porque hay autos que el filtro de aire se cambi abriendo los seguros y ya, hay otros donde hay que sacar todo literal el porta filtro y afuera abrirlo con pernos especiales (torx) y cambiarlo, no es complejo tampoco pero de algo que tarda 1-3 min a algo que tarda 7-10 min, por el momento cualquiera de las cosas que abarcan una mantención (aceite, cambio de filtros) si se puede. | Servicios de filtros y tiempo real de trabajo |
-| 10 | Lo de arriba si, pero no sabría cuánto cobrar, por lo general aveces esos servicios no se 20 mil pesos, y si hay que hacer alguna reparación esos 20 mil sirven de abono | Un servicio de la primera etapa, probablemente la inspección visual preventiva (por confirmar) |
-| 11 | Y las bujías, si depende del vehículo, por ejemplo no le cambiaría bujías a un Subaru | Cambio de bujías |
-| 12 | Si todo el rato, tengo contactos para comprar baterías, por lo general se eleva el precio y se incluye la instalación para que no se vea raro | Revisión y cambio de batería |
-| 13 | Para poder vender baterías si se requiere de una herramienta que mide el % de vida útil que le queda y la capacidad de arranque | Revisión y cambio de batería |
-| 14 | Ideal que pueda dar vaucher, Para que el cliente tenga el respaldo | Informe para el cliente o garantía (por confirmar) |
-| 15 | Cambio de frenos en general si | Cambio de pastillas y frenos (etapa 2 en el v2) |
-| 16 | Para scanear se necesita un scanner, hay uno que venden la interfase (lo que se conecta al auto) como por 200k y desde un teléfono/tablet Android se descarga la app y sirve como scanner | Lectura de códigos con escáner OBD (etapa 2 en el v2) |
-| 17 | Para hacer este tipo de trabajos requiero de una gata si o si, porque siempre me consigo | Equipo de elevación y apoyo |
-| 18 | Encuentro bacan el punto 2, porque mientras más veces hagamos un auto, más rápido lo haremos después, que estén pautadas 2 horas y nos demoremos menos es más plata jaja(regla de crecimiento) | Regla de crecimiento (v2, sección 4.4) |
-| 19 | Por lo general yo anoto las patentes de la gente a la que les he visto los autos, y les aviso también por la revisión técnica, no sé si la gente pague lo que se cobra (50 mil app) | Fidelización y recordatorios (v2, sección 9) |
-| 20 | En mi empresa se pegan unos sticker con qr que dice agenda tu mantención y le ponen el kilometraje cuando debería ser | Fidelización y recordatorios (v2, sección 9) |
-| 21 | Yo encuentro que están bien los puntos, por el momento, también el tema de poder meter nuestro vehículo y las herramientas | Condiciones del lugar al reservar (v2, sección 6.2) |
-| 22 | aquí tengo dudas, porque si no se cobra reserva, existe la probabilidad de que el cliente nos deje con los repuestos comprados, pero también podría no confiar no se | Medios de pago y anticipo para reservar |
-| 23 | Yo ya traje los cuadrados plásticos para usar de base debajo de los vehículos para trabajar más cómodamente. | Inventario de herramientas |
+| 4 | Cuando estudiaba, nos enseñaban cómo a calcular esto, y así también es como aplica Bruno sus cosas de echo yo hago parte de las pautas, podría subirla a drive y compartirlas | Sin captura. No queda claro a cuál pregunta responde (cálculo de tiempos o de precios) |
+| 5 | Sobre los pilares si agregaría otros: Creo que no por el momento, porque la transparencia está dentro del primer punto | Sin captura. Los cinco pilares (v2, sección 1.1) |
+| 6 | Lo que suele desconfiar la gente, es cuando el mecánico se demora, no entrega los repuestos, “hace” la reparación y queda igual | Sin captura. Pilar de confianza o hipótesis 3 (v2, sección 1) |
+| 7 | Por así decirlo se tiene que establecer el precio de<br>Hora hombre (cuánto me tarde en hacer x cosa (mantención, correctivo (frenos y eso))<br>El traslado y el desgaste de las herramientas (incluido el auto)<br>Costos de publicidad si hacemos<br>Y creo que eso, ya que no pagaríamos arriendo ni otras cosas | Sin captura. Cálculo del precio y costos (v2, sección 14) |
+| 8 | Otra forma de ganar dinero es con los repuestos<br>Por lo general al comprar por mayor te hacen precio<br>Entonces ejemplo comprar para la mantención de 10 Toyota, ofrecer una promoción y vender o el servicio o el kit de | Sin captura. Fuentes de ingreso: venta de repuestos (v2, sección 3.2). El mensaje termina cortado en «el kit de» |
+| 9 | Cuando decía la complejidad, es porque hay autos que el filtro de aire se cambi abriendo los seguros y ya, hay otros donde hay que sacar todo literal el porta filtro y afuera abrirlo con pernos especiales (torx) y cambiarlo, no es complejo tampoco pero de algo que tarda 1-3 min a algo que tarda 7-10 min, por el momento cualquiera de las cosas que abarcan una mantención (aceite, cambio de filtros) si se puede. | Captura de las 3:46 p. m.: cambio de filtro de aire y de habitáculo («Compatibilidad y acceso») |
+| 10 | Lo de arriba si, pero no sabría cuánto cobrar, por lo general aveces esos servicios no se 20 mil pesos, y si hay que hacer alguna reparación esos 20 mil sirven de abono | Captura de las 3:48 p. m.: inspección visual preventiva |
+| 11 | Y las bujías, si depende del vehículo, por ejemplo no le cambiaría bujías a un Subaru | Captura de las 3:48 p. m.: cambio de bujías |
+| 12 | Si todo el rato, tengo contactos para comprar baterías, por lo general se eleva el precio y se incluye la instalación para que no se vea raro | Captura de las 3:49 p. m.: revisión y cambio de batería |
+| 13 | Para poder vender baterías si se requiere de una herramienta que mide el % de vida útil que le queda y la capacidad de arranque | Captura de las 3:49 p. m.: revisión y cambio de batería |
+| 14 | Ideal que pueda dar vaucher, Para que el cliente tenga el respaldo | Entre las capturas de las 3:49 y las 4:50 p. m.: parece sobre dar un respaldo al cliente en la venta de batería (por confirmar) |
+| 15 | Cambio de frenos en general si | Captura de las 4:50 p. m.: segunda etapa, cambio de pastillas y mantención de frenos |
+| 16 | Para scanear se necesita un scanner, hay uno que venden la interfase (lo que se conecta al auto) como por 200k y desde un teléfono/tablet Android se descarga la app y sirve como scanner | Captura de las 4:50 p. m.: segunda etapa, lectura de códigos con escáner OBD |
+| 17 | Para hacer este tipo de trabajos requiero de una gata si o si, porque siempre me consigo | Entre las capturas de las 4:50 y las 4:52 p. m.: segunda y tercera etapa (frenos y trabajos de mayor complejidad), por confirmar |
+| 18 | Encuentro bacan el punto 2, porque mientras más veces hagamos un auto, más rápido lo haremos después, que estén pautadas 2 horas y nos demoremos menos es más plata jaja(regla de crecimiento) | Captura de las 4:53 p. m.: reglas del catálogo, punto 2 (regla de crecimiento) |
+| 19 | Por lo general yo anoto las patentes de la gente a la que les he visto los autos, y les aviso también por la revisión técnica, no sé si la gente pague lo que se cobra (50 mil app) | Captura de las 4:58 p. m.: flujo de atención, pasos 11 a 14 (informe, evaluación, historial y recordatorio) |
+| 20 | En mi empresa se pegan unos sticker con qr que dice agenda tu mantención y le ponen el kilometraje cuando debería ser | Captura de las 4:58 p. m.: flujo de atención, pasos 11 a 14 (informe, evaluación, historial y recordatorio) |
+| 21 | Yo encuentro que están bien los puntos, por el momento, también el tema de poder meter nuestro vehículo y las herramientas | Captura de las 4:59 p. m.: condiciones del lugar al reservar |
+| 22 | aquí tengo dudas, porque si no se cobra reserva, existe la probabilidad de que el cliente nos deje con los repuestos comprados, pero también podría no confiar no se | Captura de las 5:01 p. m.: decisiones pendientes, medios de pago y anticipo para reservar |
+| 23 | Yo ya traje los cuadrados plásticos para usar de base debajo de los vehículos para trabajar más cómodamente. | Sin captura. Parece sobre herramientas o condiciones del lugar (por confirmar) |
 
 ## Javier Cañi
 
