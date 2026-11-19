@@ -5,6 +5,17 @@
 > **Wireframes visuales (Claude Design, privado):** https://claude.ai/artifact/XCoMRfKuSoUoHuG9XGsgV3
 > **Identidad de referencia:** «Marca de torque» (https://claude.ai/artifact/2HAMs4TUDxxN3wqGz3RtgR) y sistema de diseño JJG Car (https://claude.ai/artifact/H6oqxiC3DThBKM3XdNCUbR).
 
+## Actualización · 19 de noviembre de 2026 (pedido de José)
+
+José pidió una **web de ejemplo responsive**, pensada primero para el celular y con **la menor cantidad de pasos posible**. Como todo es de ejemplo para el equipo, se rellenaron datos ficticios marcados como tales.
+
+- **Sitio de ejemplo (privado):** https://claude.ai/artifact/2hziHnmPA52Rr5AuAbRDck · archivo `web/ejemplo-jjg/index.html`.
+- **Contacto en un toque:** «¿Qué necesita tu auto?» muestra 6 opciones; cada una abre WhatsApp con el mensaje listo. Se eliminó el formulario de 3 pasos.
+- **Proceso en 3 pasos:** Nos escribes · Te cotizamos y agendamos · Vamos y te enviamos el informe (antes eran 9).
+- **Celular:** barra fija inferior con «Cotizar por WhatsApp», botón de WhatsApp en la barra superior, sin menú hamburguesa, botones de 52 px. Revisado sin desborde a 360, 768 y 1280 px.
+- **Datos de ejemplo** (precios «$ 00.000», comunas, horario, número +56 9 0000 0000, tiempos): son ficticios; no son decisiones.
+- Los wireframes del lienzo de Claude Design quedan como referencia anterior; manda el sitio de ejemplo.
+
 Todo lo que dice **«Por definir»**, **«En validación»** o **«Por verificar con un profesional»** sigue abierto. Ningún servicio, precio, plazo, comuna ni horario de este documento está aprobado.
 
 ---

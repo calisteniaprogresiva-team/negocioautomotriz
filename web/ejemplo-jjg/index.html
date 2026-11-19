@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- SITIO DE EJEMPLO para el equipo. No publicar abierto: el número de WhatsApp, precios, comunas y horarios son ficticios. -->
+<meta name="robots" content="noindex, nofollow">
+<title>JJG Car Service · Sitio de ejemplo</title>
+<meta name="description" content="Mantención de tu auto a domicilio en Santiago, con informe digital, fotos y repuestos identificados. Cotiza por WhatsApp.">
+<link rel="icon" type="image/svg+xml" href="logos/jjg-isotipo-color.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+/* Tokens del sistema de diseño JJG Car (sin cambios) */
+:root{
+  --grafito:#25272D; --grafito-2:#2E3038; --grafito-3:#1E2025;
+  --humo:#F5F5F3; --blanco:#FFFFFF;
+  --violeta:#59416F; --aluminio:#AEB4BC; --naranja:#E98232;
+  --tinta-2:#5A5F68;      /* texto secundario sobre claro (derivado del sistema) */
+  --naranja-tinta:#A9551A;/* naranja como texto sobre claro (derivado del sistema) */
+  --linea:rgba(174,180,188,.45);
+  --display:"Chakra Petch","Space Grotesk",system-ui,sans-serif;
+  --sans:"Inter","Plus Jakarta Sans",system-ui,sans-serif;
+  --r-sm:4px; --r-md:6px;
+  --barra:76px; /* alto de la barra fija móvil */
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--humo);color:var(--grafito);font-family:var(--sans);font-size:16px;line-height:1.5;padding-bottom:var(--barra)}
+img{max-width:100%;display:block}
+a{color:var(--violeta)}
+:focus-visible{outline:2px solid var(--naranja);outline-offset:2px}
+h1,h2,h3{font-family:var(--display);font-weight:700;margin:0;text-wrap:balance;letter-spacing:-.005em}
+p{margin:0}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 16px}
+.lbl{font-family:var(--display);font-weight:600;font-size:12px;line-height:16px;letter-spacing:.08em;text-transform:uppercase}
+.num{font-variant-numeric:tabular-nums}
+.oscuro{background:var(--grafito);color:var(--humo)}
+.oscuro .sub{color:var(--aluminio)}
+.sub{color:var(--tinta-2)}
+section{scroll-margin-top:64px}
+
+/* Botones */
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 20px;border-radius:var(--r-md);font-family:var(--display);font-weight:700;font-size:15px;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border:1px solid transparent;transition:background-color .15s,border-color .15s}
+.btn-p{background:var(--naranja);color:var(--grafito)}
+.btn-p:hover{background:#F0954F}
+.btn-s{border-color:var(--aluminio);color:var(--humo)}
+.btn-s:hover{border-color:var(--humo)}
+.btn svg{flex:none}
+
+/* Aviso de ejemplo */
+.cinta{background:var(--violeta);color:var(--humo);text-align:center;font-size:13px;line-height:18px;padding:8px 16px}
+.cinta b{font-family:var(--display);letter-spacing:.06em;text-transform:uppercase;font-size:12px}
+
+/* Barra superior */
+.top{position:sticky;top:0;z-index:20;background:var(--grafito);border-bottom:1px solid rgba(174,180,188,.25)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:60px}
+.top .logo img{height:34px;width:auto}
+.top nav{display:none}
+.top .wa-mini{display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:var(--r-md);background:var(--naranja);color:var(--grafito)}
+.top .btn{display:none}
+
+/* Portada */
+.hero{padding:28px 0 40px}
+.hero .wrap{display:grid;gap:28px}
+.hero h1{font-size:34px;line-height:38px;margin:10px 0 12px}
+.hero .sub{font-size:17px;line-height:26px;margin-bottom:22px}
+.hero .acciones{display:grid;gap:10px}
+.hero .acciones .btn-p{display:none} /* en el teléfono ya está la barra fija */
+.hero .dato{margin-top:18px;color:var(--aluminio);display:flex;flex-wrap:wrap;gap:6px 14px}
+
+/* Informe (componente compartido) */
+.informe{position:relative;background:var(--blanco);color:var(--grafito);border-radius:var(--r-md);padding:16px;font-size:14px;line-height:20px;box-shadow:0 4px 12px rgba(0,0,0,.22)}
+.informe .sello{position:absolute;top:-11px;right:12px;background:var(--violeta);color:var(--humo);padding:3px 8px;border-radius:var(--r-sm);font-size:11px}
+.informe .cab{display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:2px solid var(--grafito);padding-bottom:10px}
+.informe .cab img{height:26px;width:auto}
+.informe .ot{font-family:var(--display);font-weight:700;font-size:15px}
+.informe .meta{display:grid;grid-template-columns:1fr 1fr;gap:4px 12px;padding:10px 0;border-bottom:1px solid var(--linea)}
+.informe .meta span{display:block;color:var(--tinta-2);font-size:11px}
+.fila{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid rgba(174,180,188,.35)}
+.fila:last-child{border-bottom:0}
+.fila .t{flex:1;min-width:0}
+.fila .e{font-family:var(--display);font-weight:600;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
+.e-obs{color:var(--naranja-tinta)} .e-mute{color:var(--tinta-2)}
+.fotos{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:10px}
+.foto{background:repeating-linear-gradient(135deg,rgba(174,180,188,.2) 0 1px,transparent 1px 9px);border:1px dashed var(--aluminio);border-radius:var(--r-sm);min-height:56px;display:flex;align-items:flex-end;padding:6px 8px;color:var(--tinta-2)}
+.oscuro .foto{color:var(--aluminio);border-color:rgba(174,180,188,.6)}
+.foto .lbl{font-size:10px;line-height:13px}
+.total{display:flex;justify-content:space-between;padding-top:10px;margin-top:4px;border-top:1px solid var(--linea);font-weight:600}
+
+/* Secciones */
+.sec{padding:48px 0}
+.sec h2{font-size:28px;line-height:32px;margin:8px 0 10px}
+.sec .intro{margin-bottom:24px;max-width:40em}
+.eyebrow{color:var(--violeta)} .oscuro .eyebrow{color:var(--aluminio)}
+
+/* ¿Qué necesitas? Un toque = WhatsApp con el mensaje listo */
+.opciones{display:grid;gap:8px}
+.op{display:flex;align-items:center;gap:14px;min-height:64px;padding:12px 14px;background:var(--blanco);border:1px solid var(--aluminio);border-radius:var(--r-md);text-decoration:none;color:var(--grafito);transition:border-color .15s}
+.op:hover{border-color:var(--grafito)}
+.op svg.i{flex:none}
+.op .t{flex:1;min-width:0}
+.op b{display:block;font-family:var(--display);font-size:17px;line-height:22px}
+.op small{display:block;color:var(--tinta-2);font-size:14px;line-height:20px}
+.op .flecha{flex:none;color:var(--tinta-2)}
+.nota{margin-top:14px;font-size:14px;line-height:20px;display:flex;gap:10px;align-items:flex-start;color:var(--tinta-2)}
+
+/* Pasos: solo 3 */
+.pasos{list-style:none;margin:0;padding:0;display:grid;gap:0;counter-reset:p}
+.pasos li{display:grid;grid-template-columns:44px 1fr;gap:4px 14px;padding:18px 0;border-top:1px solid rgba(174,180,188,.35)}
+.pasos li::before{counter-increment:p;content:"0" counter(p);grid-row:span 2;font-family:var(--display);font-weight:700;font-size:28px;line-height:30px;color:var(--aluminio)}
+.pasos li:last-child::before{color:var(--naranja)}
+.pasos h3{font-size:20px;line-height:26px}
+.pasos p{color:var(--aluminio)}
+
+/* Transparencia */
+.cuatro{margin:0;border-top:1px solid var(--aluminio)}
+.cuatro div{display:grid;grid-template-columns:120px 1fr;gap:12px;padding:12px 0;border-bottom:1px solid var(--linea)}
+.cuatro dt{padding-top:3px}
+.cuatro dd{margin:0}
+.panel{background:linear-gradient(160deg,var(--violeta),var(--grafito) 180%);color:var(--humo);border-radius:var(--r-md);padding:18px}
+.panel .estado{display:flex;align-items:center;gap:8px}
+.panel .estado::before{content:"";width:8px;height:8px;border-radius:2px;background:var(--naranja)}
+.panel .grande{font-family:var(--display);font-weight:700;font-size:22px;line-height:26px;margin:8px 0 4px}
+
+/* Servicios */
+.servicios{border-top:2px solid var(--grafito)}
+.serv{display:grid;gap:4px;padding:16px 0;border-bottom:1px solid var(--linea)}
+.serv h3{font-size:19px;line-height:24px;display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+.precio{font-family:var(--sans);font-weight:600;font-size:15px;color:var(--naranja-tinta);white-space:nowrap}
+.serv p{color:var(--tinta-2);font-size:15px}
+
+/* Equipo */
+.equipo{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.equipo .foto{aspect-ratio:4/5;min-height:0}
+.equipo b{display:block;font-family:var(--display);font-size:16px;margin-top:8px}
+.equipo small{color:var(--tinta-2);font-size:13px;line-height:18px;display:block}
+
+/* Zona */
+.zona{display:grid;gap:16px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid rgba(174,180,188,.6);border-radius:var(--r-sm);padding:6px 10px;font-size:14px}
+
+/* Preguntas */
+details{border-bottom:1px solid var(--linea)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:56px;padding:12px 0;font-family:var(--display);font-weight:700;font-size:17px;line-height:22px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:22px;color:var(--tinta-2);flex:none}
+details[open] summary::after{content:"−"}
+details p{padding:0 0 16px;color:var(--tinta-2)}
+
+/* Cierre y pie */
+.cierre{padding:48px 0}
+.cierre h2{font-size:28px;line-height:32px;margin-bottom:10px}
+.cierre .sub{margin-bottom:20px}
+footer{background:var(--grafito-3);color:var(--aluminio);padding:32px 0;font-size:14px;line-height:20px}
+footer .wrap{display:grid;gap:20px}
+footer img{height:56px;width:auto}
+footer a{color:var(--aluminio)}
+
+/* Barra fija móvil */
+.fija{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--grafito);border-top:1px solid rgba(174,180,188,.45);padding:12px 16px calc(12px + env(safe-area-inset-bottom))}
+
+/* ---------- Tablet ---------- */
+@media (min-width:640px){
+  .wrap{padding:0 24px}
+  .hero .acciones{grid-template-columns:auto auto;justify-content:start}
+  .opciones{grid-template-columns:1fr 1fr}
+  .equipo{gap:20px}
+  .equipo small{font-size:14px}
+}
+
+/* ---------- Escritorio ---------- */
+@media (min-width:960px){
+  body{padding-bottom:0}
+  .fija{display:none}
+  .top .wrap{height:72px}
+  .top .logo img{height:40px}
+  .top nav{display:flex;gap:28px;font-size:14px}
+  .top nav a{color:var(--aluminio);text-decoration:none}
+  .top nav a:hover{color:var(--humo)}
+  .top .wa-mini{display:none}
+  .top .btn{display:flex;min-height:44px;padding:0 16px;font-size:14px}
+  section{scroll-margin-top:80px}
+  .hero{padding:72px 0 80px}
+  .hero .acciones .btn-p{display:flex}
+  .hero .wrap{grid-template-columns:1.15fr 1fr;gap:56px;align-items:center}
+  .hero h1{font-size:52px;line-height:56px;margin:16px 0 18px}
+  .hero .sub{font-size:18px;line-height:28px;max-width:34em}
+  .informe{padding:24px;font-size:14px}
+  .informe .cab img{height:30px}
+  .sec{padding:88px 0}
+  .sec h2,.cierre h2{font-size:40px;line-height:44px}
+  .opciones{grid-template-columns:repeat(3,1fr)}
+  .pasos{grid-template-columns:repeat(3,1fr);gap:32px}
+  .pasos li{grid-template-columns:1fr;border-top:1px solid var(--aluminio)}
+  .pasos li:last-child{border-top-color:var(--naranja)}
+  .pasos li::before{grid-row:auto;margin-bottom:8px}
+  .dos{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+  .serv{grid-template-columns:1.2fr 2fr;gap:24px;align-items:baseline}
+  .equipo{grid-template-columns:repeat(3,minmax(0,240px))}
+  .zona{grid-template-columns:1fr 1fr;align-items:center;gap:48px}
+  .cierre .wrap{display:flex;justify-content:space-between;align-items:center;gap:32px}
+  .cierre .sub{margin-bottom:0}
+  footer .wrap{grid-template-columns:auto 1fr 1fr;gap:48px}
+}
+</style>
+</head>
+<body>
+
+<div class="cinta" role="note"><b>Sitio de ejemplo</b> · Para revisión del equipo. Precios, comunas, horarios y número son ficticios.</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#inicio" aria-label="JJG Car Service, inicio"><img src="logos/jjg-horizontal-compacto-color-oscuro.svg" alt="JJG Car Service" width="124" height="40"></a>
+    <nav aria-label="Principal">
+      <a href="#servicios">Servicios</a>
+      <a href="#como">Cómo funciona</a>
+      <a href="#informe">El informe</a>
+      <a href="#preguntas">Preguntas</a>
+    </nav>
+    <a class="btn btn-p" data-wa="Hola, quiero cotizar una mantención." href="#cotizar">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M4 20 L5.5 15.5 A8 8 0 1 1 8.5 18.5 Z"/></svg>
+      Cotizar por WhatsApp</a>
+    <a class="wa-mini" data-wa="Hola, quiero cotizar una mantención." href="#cotizar" aria-label="Cotizar por WhatsApp">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M4 20 L5.5 15.5 A8 8 0 1 1 8.5 18.5 Z"/></svg>
+    </a>
+  </div>
+</header>
+
+<main>
+
+<!-- PORTADA -->
+<section id="inicio" class="hero oscuro">
+  <div class="wrap">
+    <div>
+      <p class="lbl sub">Mantención automotriz a domicilio · Santiago</p>
+      <h1>Sabrás qué se hizo en tu auto, con qué repuesto y cuánto costó.</h1>
+      <p class="sub">Vamos a tu casa a hacer la mantención. Al terminar te enviamos un informe con fotos, repuestos y lo que conviene revisar después.</p>
+      <div class="acciones">
+        <a class="btn btn-p" data-wa="Hola, quiero cotizar una mantención." href="#cotizar">Cotizar por WhatsApp</a>
+        <a class="btn btn-s" href="#informe">Ver un informe de ejemplo</a>
+      </div>
+      <p class="lbl dato"><span>Sábados y domingos</span><span>·</span><span>Lo Prado, Estación Central y alrededores</span></p>
+    </div>
+
+    <figure class="informe" aria-label="Informe de ejemplo">
+      <figcaption class="lbl sello">Ejemplo ficticio</figcaption>
+      <div class="cab">
+        <img src="logos/jjg-horizontal-compacto-color.svg" alt="" width="81" height="26">
+        <div style="text-align:right"><div class="lbl e-mute" style="font-size:10px">Informe de mantención</div><div class="ot num">OT-0001</div></div>
+      </div>
+      <div class="meta num">
+        <div><span class="lbl">Vehículo</span>VEH-0001 · city car</div>
+        <div><span class="lbl">Kilometraje</span>84.210&nbsp;km</div>
+      </div>
+      <div class="fila"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#25272D" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M12 2.5 L20.2 7.25 V16.75 L12 21.5 L3.8 16.75 V7.25 Z"/><circle cx="12" cy="12" r="3.5"/><path stroke="#E98232" d="M15 10.3 L21.5 6.5"/></svg><span class="t">Cambio de aceite y filtro</span><span class="e">Realizado</span></div>
+      <div class="fila"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5A5F68" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="8"/></svg><span class="t">Neumáticos, luces y niveles</span><span class="e e-mute">Revisado</span></div>
+      <div class="fila"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A9551A" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M12 4 L21 20 H3 Z M12 10 V14 M12 17 V17.5"/></svg><span class="t">Pastillas con desgaste visible</span><span class="e e-obs">Atención</span></div>
+      <div class="fotos">
+        <div class="foto"><span class="lbl">Antes</span></div>
+        <div class="foto"><span class="lbl">Después</span></div>
+        <div class="foto"><span class="lbl">Pieza retirada</span></div>
+      </div>
+    </figure>
+  </div>
+</section>
+
+<!-- QUÉ NECESITAS: un toque y se abre WhatsApp con el mensaje listo -->
+<section id="servicios" class="sec">
+  <div class="wrap">
+    <p class="lbl eyebrow">¿Qué necesita tu auto?</p>
+    <h2>Elige y te escribimos con la cotización.</h2>
+    <p class="sub intro">Un toque abre WhatsApp con el mensaje listo. Solo agrega marca, modelo, año y comuna.</p>
+
+    <div class="opciones">
+      <a class="op" data-wa="Hola, quiero cotizar un cambio de aceite y filtro. Mi auto es (marca, modelo, año): ___ y estoy en la comuna de: ___" href="#cotizar">
+        <svg class="i" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M12 3 L18 11 A6 6 0 1 1 6 11 Z"/><path stroke="#E98232" d="M10 15 H14"/></svg>
+        <span class="t"><b>Cambio de aceite</b><small>Aceite según el fabricante y filtro nuevo</small></span>
+        <svg class="flecha" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 5 L16 12 L9 19"/></svg>
+      </a>
+      <a class="op" data-wa="Hola, quiero cotizar un cambio de filtros (aire / habitáculo). Mi auto es (marca, modelo, año): ___ y estoy en la comuna de: ___" href="#cotizar">
+        <svg class="i" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M12 3 L20 7.5 V16.5 L12 21 L4 16.5 V7.5 Z"/><path d="M4 7.5 L12 12 L20 7.5 M12 12 V21"/></svg>
+        <span class="t"><b>Filtros</b><small>Aire y habitáculo</small></span>
+        <svg class="flecha" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 5 L16 12 L9 19"/></svg>
+      </a>
+      <a class="op" data-wa="Hola, quiero agendar una revisión preventiva. Mi auto es (marca, modelo, año): ___ y estoy en la comuna de: ___" href="#cotizar">
+        <svg class="i" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M12 2.5 L20.2 7.25 V16.75 L12 21.5 L3.8 16.75 V7.25 Z"/><circle cx="12" cy="12" r="3.5"/><path stroke="#E98232" d="M15 10.3 L21.5 6.5"/></svg>
+        <span class="t"><b>Revisión preventiva</b><small>Antes de un viaje o cuando toca</small></span>
+        <svg class="flecha" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 5 L16 12 L9 19"/></svg>
+      </a>
+      <a class="op" data-wa="Hola, necesito revisar o cambiar la batería. Mi auto es (marca, modelo, año): ___ y estoy en la comuna de: ___" href="#cotizar">
+        <svg class="i" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><rect x="3" y="7" width="18" height="13"/><path d="M7 7 V4 H10 V7 M14 7 V4 H17 V7"/><path stroke="#E98232" d="M7 13 H10 M14 13 H17 M15.5 11.5 V14.5"/></svg>
+        <span class="t"><b>Batería</b><small>Revisión y cambio</small></span>
+        <svg class="flecha" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 5 L16 12 L9 19"/></svg>
+      </a>
+      <a class="op" data-wa="Hola, quiero cotizar un cambio de bujías. Mi auto es (marca, modelo, año): ___ y estoy en la comuna de: ___" href="#cotizar">
+        <svg class="i" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M10 2 H14 V6 H10 Z M9 6 H15 L14 14 H10 Z M11 14 V19 M11 19 H14"/><path stroke="#E98232" d="M16 19 L19 22"/></svg>
+        <span class="t"><b>Bujías</b><small>Según el motor de tu auto</small></span>
+        <svg class="flecha" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 5 L16 12 L9 19"/></svg>
+      </a>
+      <a class="op" data-wa="Hola, tengo una consulta sobre mi auto. Es (marca, modelo, año): ___ y lo que noto es: ___" href="#cotizar">
+        <svg class="i" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M4 20 V13 L6.5 7 H17.5 L20 13 V20"/><path d="M4 13 H20 M4 17 H7 M17 17 H20"/><path d="M7 20 V22 M17 20 V22"/></svg>
+        <span class="t"><b>Otra cosa / no sé</b><small>Cuéntanos qué notas</small></span>
+        <svg class="flecha" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 5 L16 12 L9 19"/></svg>
+      </a>
+    </div>
+    <p class="nota">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true" style="flex:none"><path d="M3 11 L12 4 L21 11"/><path d="M6 9 V20 H18 V9"/><path stroke="#E98232" d="M10 20 V14 H14 V20"/></svg>
+      Lo que necesita elevador, soldadura o desarme mayor no se hace a domicilio. Si es tu caso, te lo decimos antes.
+    </p>
+  </div>
+</section>
+
+<!-- CÓMO FUNCIONA: 3 pasos -->
+<section id="como" class="sec oscuro">
+  <div class="wrap">
+    <p class="lbl eyebrow">Cómo funciona</p>
+    <h2>Tres pasos. Nada se hace sin tu visto bueno.</h2>
+    <ol class="pasos" style="margin-top:24px">
+      <li><h3>Nos escribes</h3><p>Por WhatsApp, con tu auto y lo que necesitas.</p></li>
+      <li><h3>Te cotizamos y agendamos</h3><p>Precio cerrado, con repuestos y mano de obra por separado. Eliges el día.</p></li>
+      <li><h3>Vamos y te enviamos el informe</h3><p>Hacemos solo lo autorizado. Si aparece algo más, te consultamos antes.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- EL INFORME -->
+<section id="informe" class="sec">
+  <div class="wrap dos">
+    <div>
+      <p class="lbl eyebrow">El informe</p>
+      <h2>Lo que se hizo, lo que no y lo que viene.</h2>
+      <p class="sub intro">Cada trabajo termina con un informe que separa cuatro cosas:</p>
+      <dl class="cuatro">
+        <div><dt class="lbl">Realizado</dt><dd>Con el repuesto exacto: marca, referencia y cantidad.</dd></div>
+        <div><dt class="lbl">Revisado</dt><dd>Lo que miramos y cómo estaba.</dd></div>
+        <div><dt class="lbl e-obs">Atención</dt><dd>Lo que conviene mirar pronto, con foto.</dd></div>
+        <div><dt class="lbl">No realizado</dt><dd>Lo recomendado que no hicimos, para que decidas tú.</dd></div>
+      </dl>
+    </div>
+
+    <div style="display:grid;gap:12px">
+      <article class="informe" aria-label="Detalle de informe de ejemplo" style="box-shadow:0 1px 2px rgba(37,39,45,.12);border:1px solid var(--aluminio)">
+        <span class="lbl sello">Ejemplo ficticio</span>
+        <p class="lbl e-mute" style="margin-bottom:6px">Repuestos y valor</p>
+        <div class="fila num"><span class="t">Aceite 5W-30 · Marca X · 3,5&nbsp;L</span><span>$ 00.000</span></div>
+        <div class="fila num"><span class="t">Filtro de aceite · Ref. 0000</span><span>$ 0.000</span></div>
+        <div class="fila num"><span class="t">Mano de obra</span><span>$ 00.000</span></div>
+        <div class="total num"><span>Total</span><span>$ 00.000</span></div>
+        <p class="lbl e-mute" style="margin:14px 0 2px">No realizado</p>
+        <div class="fila"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5A5F68" stroke-width="2" stroke-dasharray="3 3" aria-hidden="true"><circle cx="12" cy="12" r="8"/></svg><span class="t">Filtro de habitáculo</span><span class="e e-mute">Recomendado</span></div>
+      </article>
+      <div class="panel">
+        <p class="lbl estado">Próxima mantención</p>
+        <p class="grande num">94.000&nbsp;km o mayo 2027</p>
+        <p style="font-size:15px">Lo que ocurra primero, según el manual. Te avisamos antes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS Y PRECIOS DE EJEMPLO -->
+<section class="sec" style="background:var(--blanco);border-top:1px solid var(--linea);border-bottom:1px solid var(--linea);padding-top:48px">
+  <div class="wrap">
+    <p class="lbl eyebrow">Servicios</p>
+    <h2>Mantención simple, en tu casa.</h2>
+    <p class="sub intro">Precios de ejemplo. El precio real se cierra con tu auto identificado, antes de empezar.</p>
+    <div class="servicios">
+      <div class="serv"><h3>Cambio de aceite y filtro <span class="precio num">Desde $ 00.000</span></h3><p>Aceite según el fabricante, filtro nuevo y retiro del aceite usado.</p></div>
+      <div class="serv"><h3>Filtros de aire y habitáculo <span class="precio num">Desde $ 00.000</span></h3><p>Repuestos compatibles con tu modelo.</p></div>
+      <div class="serv"><h3>Revisión preventiva <span class="precio num">Desde $ 00.000</span></h3><p>Niveles, neumáticos, luces, escobillas, batería y estado visible de pastillas. No es un diagnóstico completo.</p></div>
+      <div class="serv"><h3>Bujías <span class="precio num">Desde $ 00.000</span></h3><p>Según motor y especificaciones.</p></div>
+      <div class="serv"><h3>Batería <span class="precio num">Desde $ 00.000</span></h3><p>Revisión, y cambio si hace falta.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- EQUIPO -->
+<section class="sec">
+  <div class="wrap">
+    <p class="lbl eyebrow">Quiénes somos</p>
+    <h2>Tres personas. Sabes quién va a tu casa.</h2>
+    <p class="sub intro">Un emprendimiento pequeño, con un responsable técnico que revisa cada trabajo.</p>
+    <div class="equipo">
+      <div><div class="foto"><span class="lbl">Foto real</span></div><b>Gustavo</b><small>Responsable técnico</small></div>
+      <div><div class="foto"><span class="lbl">Foto real</span></div><b>José</b><small>Atención y coordinación</small></div>
+      <div><div class="foto"><span class="lbl">Foto real</span></div><b>Javier</b><small>Equipo</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ZONA -->
+<section class="sec oscuro" style="padding:48px 0">
+  <div class="wrap zona">
+    <div>
+      <p class="lbl eyebrow">Dónde atendemos</p>
+      <h2>Desde Lo Prado y Estación Central.</h2>
+      <p class="sub">Sábados y domingos, de 9:00 a 18:00 (ejemplo).</p>
+    </div>
+    <div class="chips" aria-label="Comunas de ejemplo">
+      <span class="chip">Lo Prado</span><span class="chip">Estación Central</span><span class="chip">Quinta Normal</span><span class="chip">Pudahuel</span><span class="chip">Cerro Navia</span><span class="chip">Santiago Centro</span><span class="chip">Maipú</span>
+    </div>
+  </div>
+</section>
+
+<!-- PREGUNTAS -->
+<section id="preguntas" class="sec">
+  <div class="wrap" style="max-width:820px">
+    <p class="lbl eyebrow">Preguntas frecuentes</p>
+    <h2 style="margin-bottom:16px">Antes de agendar</h2>
+    <div style="border-top:1px solid var(--aluminio)">
+      <details><summary>¿Qué necesito en el lugar?</summary><p>Una superficie plana y firme, espacio alrededor del auto y que no sea en la calle. En edificios, el permiso de la comunidad.</p></details>
+      <details><summary>¿Cómo se paga?</summary><p>Efectivo o transferencia, al terminar (ejemplo).</p></details>
+      <details><summary>¿Y si encuentran otra falla?</summary><p>Te la mostramos con foto y te la cotizamos aparte. No la hacemos sin tu autorización.</p></details>
+      <details><summary>¿Cuánto demora?</summary><p>Un cambio de aceite, cerca de una hora (ejemplo).</p></details>
+      <details><summary>¿Qué hacen con el aceite usado?</summary><p>Nos lo llevamos para su disposición. El destino exacto está por confirmar.</p></details>
+      <details><summary>¿Y si llueve o tengo que cancelar?</summary><p>Reprogramamos sin costo avisando con anticipación (ejemplo).</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CIERRE -->
+<section id="cotizar" class="cierre oscuro">
+  <div class="wrap">
+    <div>
+      <h2>Cuéntanos qué auto tienes y qué necesita.</h2>
+      <p class="sub">Te respondemos por WhatsApp con una cotización clara.</p>
+    </div>
+    <a class="btn btn-p" data-wa="Hola, quiero cotizar una mantención." href="#cotizar" style="min-width:280px">Cotizar por WhatsApp</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="logos/jjg-horizontal-color-oscuro.svg" alt="JJG Car Service, mantención y servicio automotriz" width="230" height="56">
+    <div><p class="lbl" style="margin-bottom:6px">Contacto</p><p>WhatsApp +56 9 0000 0000 (ejemplo)</p><p>Instagram @jjgcarservice (ejemplo)</p></div>
+    <div><p class="lbl" style="margin-bottom:6px">Legal</p><p><a href="#">Política de privacidad</a> · <a href="#">Condiciones del servicio</a></p><p style="margin-top:6px">Textos legales pendientes de revisión profesional.</p></div>
+  </div>
+</footer>
+
+<div class="fija">
+  <a class="btn btn-p" data-wa="Hola, quiero cotizar una mantención." href="#cotizar">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M4 20 L5.5 15.5 A8 8 0 1 1 8.5 18.5 Z"/></svg>
+    Cotizar por WhatsApp</a>
+</div>
+
+<script>
+// Arma los enlaces de WhatsApp con el mensaje listo. Número de ejemplo: cambiar antes de publicar.
+(function(){
+  var NUMERO = "56900000000";
+  document.querySelectorAll("a[data-wa]").forEach(function(a){
+    a.href = "https://wa.me/" + NUMERO + "?text=" + encodeURIComponent(a.getAttribute("data-wa"));
+    a.rel = "noopener";
+  });
+})();
+</script>
+</body>
+</html>
