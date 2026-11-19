@@ -24,7 +24,7 @@ No hay porcentajes, aportes ni responsabilidades definitivas. **Nunca** los asum
 
 ## 3. Estado actual (actualizar cada vez que cambie)
 
-- **Fecha de este estado:** 18 de noviembre de 2026.
+- **Fecha de este estado:** 19 de noviembre de 2026.
 - **Etapa del plan:** antes de la etapa 1 (Validación).
 - **Próximo hito:** reunión de socios del **domingo 15 de noviembre de 2026, 18:00**. Agenda y resultados esperados en `docs/anteproyecto-v2.md`, sección 18.
 - **Hecho:**
@@ -35,6 +35,7 @@ No hay porcentajes, aportes ni responsabilidades definitivas. **Nunca** los asum
   - Documento compartido para completar entre socios, porque no habrá reunión presencial: https://claude.ai/artifact/Thrjf7DfTbAQ866S2FGLM4 (privado hasta que José lo comparta). Tiene preguntas para cada socio, tabla de decisiones y resultados esperados. **Fecha límite para responder: lunes 16 de noviembre de 2026.**
   - Página `respuestas.html` (sección 13 del sitio) y `docs/respuestas-socios.md`: reciben una copia de las respuestas. Copia del 18 de nov de 2026: respuestas de Gustavo (le llegaron a José por captura de pantalla, sin las preguntas citadas, así que la pregunta a la que responde cada una se dedujo de 9 capturas de lo que Gustavo estaba leyendo en el sitio, con su hora; los mensajes 4 a 8, 14, 17 y 23 siguen por confirmar). Javier todavía no responde. **No publicar estas páginas mientras el sitio sea público**: las respuestas incluyen datos del contrato y los planes laborales de Gustavo.
   - Web de pre-lanzamiento, vista previa privada (solo José): https://claude.ai/artifact/UCekWY4M2JbhnKtz6pcE29. Sin precios, sin formularios, contacto solo por WhatsApp con mensaje prellenado. Pendientes antes de publicar: nombre comercial, número de WhatsApp, comunas, política de privacidad, color definitivo, fotos reales con permiso, y revisar que los pasos de «Cómo funciona» y los textos sean aprobados por los tres.
+  - Propuesta estratégica y de diseño del sitio oficial de **JJG Car Service** (fase 1, sin programar): `web/estrategia/propuesta-sitio-jjg.md`, con wireframes en Claude Design (privado): https://claude.ai/artifact/XCoMRfKuSoUoHuG9XGsgV3. Usa la identidad «Marca de torque» (https://claude.ai/artifact/2HAMs4TUDxxN3wqGz3RtgR) y el sistema de diseño JJG Car (https://claude.ai/artifact/H6oqxiC3DThBKM3XdNCUbR). Espera la revisión de José. **El nombre JJG Car Service y la nueva paleta (grafito #25272D, violeta #59416F, naranja #E98232, Chakra Petch + Inter) aún no están registrados en `docs/decisiones.md`; las secciones 6 de este archivo y `assets/estilos.css` siguen con la paleta anterior.**
 - **Pendiente:** lo que los socios respondan en el documento compartido. Cuando los tres marquen un tema como acordado, pasarlo a `docs/decisiones.md`.
 - **Pendiente (anterior):** todo lo que la reunión decida. Registrar cada acuerdo en `docs/decisiones.md`.
 
@@ -100,9 +101,11 @@ Cada entregable va en su propia carpeta. Antes de empezar uno, revisa en qué et
 | Plantilla del informe al cliente | `sistemas/` | Etapa 2 | Estructura en v2, sección 8 |
 | Maqueta de prueba de la web comercial (variantes A morado y B azul acero, cambia con #morado / #azul) | `web/maqueta/index.html` | Antes de la etapa 1 | Hecha; publicada como página privada para comparar en la reunión |
 | Web de pre-lanzamiento (una página: cupos de prueba por WhatsApp, sin precios ni formularios) | `web/pre-lanzamiento/index.html` | Etapa 3 (prueba controlada) | Hecha como vista previa privada; **no publicar** hasta tener nombre, número de WhatsApp, comunas y política de privacidad, y que Gustavo apruebe lo que se ofrece. Las instrucciones para publicar están en un comentario al inicio del archivo |
+| Propuesta estratégica, arquitectura, SEO y wireframes del sitio oficial JJG Car Service | `web/estrategia/` | Antes de la etapa 1 (planificación) | Hecha la fase 1; espera revisión de José antes de programar |
 | Página web comercial completa | `web/` | Etapa 3 en adelante | **No publicar** antes de validar capacidad, precios y cobertura |
 | Portal del cliente | `portal/` | Etapa 5 (Crecimiento) | Solo idea; no construir sin decisión |
-| Brief de diseño y prompt para probar la web en Claude Design (variantes morado y azul acero) | `marca/brief-diseno-web.md` | Antes de la etapa 1 | Hecho; la decisión de color es de los tres |
+| Brief de diseño y prompt para probar la web en Claude Design (variantes morado y azul acero) | `web/estrategia/propuesta-sitio-jjg.md` | Propuesta del sitio oficial JJG Car Service (fase 1) |
+| `marca/brief-diseno-web.md` | Antes de la etapa 1 | Hecho; la decisión de color es de los tres |
 | Identidad: logo, tarjetas, uniforme | `marca/` | Cuando haya nombre | Pendiente del nombre |
 
 Estructura de la web comercial según el v2 (sección 11): Inicio · Servicios · Cómo funciona · Cobertura real · Confianza · Contacto. Solo se publica la cobertura real, sin comprar publicidad antes de validar.
