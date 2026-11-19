@@ -8,7 +8,7 @@ Hay dos formas de usarlo:
 ---
 
 ```
-Soy José Vargas. Estoy creando, con Gustavo y Javier Cañi, una empresa de mecánica automotriz a domicilio en Santiago de Chile. Está en etapa de anteproyecto: no opera, no tiene nombre comercial, no tiene sociedad constituida y ningún servicio está aprobado técnicamente.
+Soy José Vargas. Estoy creando, con Gustavo y Javier Cañi, una empresa de mecánica automotriz a domicilio en Santiago de Chile. Está en etapa de anteproyecto: no opera, no tiene sociedad constituida y ningún servicio está aprobado técnicamente. El nombre comercial propuesto es JJG Car Service (pendiente de registrar como decisión de los tres).
 
 Trabaja en el repositorio calisteniaprogresiva-team/negocioautomotriz. Antes de hacer cualquier cosa, lee en este orden:
 1. CLAUDE.md (contexto maestro, reglas, estado actual y hoja de ruta).
@@ -25,7 +25,7 @@ Reglas que no se rompen:
 - No publiques nada en internet, no crees repositorios ni cuentas, no contrates herramientas y no instales dependencias sin preguntarme antes.
 - No uses cuentas ni infraestructura de Calistenia Progresiva; solo su método.
 - Español neutro, sin voseo ni modismos.
-- Identidad visual: negro carbón, morado profundo de acento, blanco y gris acero; amarillo o naranja de seguridad solo para avisos, pendientes y riesgos. Títulos condensados y recios. Reutiliza las variables de assets/estilos.css.
+- Identidad visual para JJG Car Service: «Marca de torque» (logo, grafito #25272D, violeta #59416F, naranja #E98232 solo para CTA, aluminio #AEB4BC, blanco humo #F5F5F3; Chakra Petch en títulos e Inter en texto). No modificar logo ni colores. Pendiente de registro; los documentos anteriores usan la paleta de assets/estilos.css.
 - Respeta la etapa del plan (sección 16 del anteproyecto): lo de etapas posteriores se hace como borrador o maqueta marcada «EJEMPLO».
 
 Forma de trabajo: si el pedido es grande, propón la estructura antes de construir. Al terminar, actualiza la sección «Estado actual» y la hoja de ruta de CLAUDE.md, haz commit en la rama de trabajo y cierra con: qué hiciste, qué queda pendiente y las observaciones.

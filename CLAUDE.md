@@ -6,7 +6,7 @@
 
 ## 1. Qué es este proyecto
 
-Una **empresa de mecánica automotriz a domicilio en Santiago de Chile**, en etapa de anteproyecto. Todavía **no opera**, no tiene nombre comercial, no tiene sociedad constituida y ningún servicio está aprobado técnicamente.
+Una **empresa de mecánica automotriz a domicilio en Santiago de Chile**, en etapa de anteproyecto. Todavía **no opera**, no tiene sociedad constituida y ningún servicio está aprobado técnicamente. **Nombre comercial propuesto: JJG Car Service** (con identidad visual hecha), pendiente de registrar como decisión de los tres.
 
 **En una frase (del anteproyecto v2):** servicio de mantención simple de vehículos a domicilio, con agenda, historial del auto de cada cliente y recordatorios de la próxima mantención. Por ahora, solo fines de semana.
 
@@ -26,7 +26,18 @@ No hay porcentajes, aportes ni responsabilidades definitivas. **Nunca** los asum
 
 - **Fecha de este estado:** 19 de noviembre de 2026.
 - **Etapa del plan:** antes de la etapa 1 (Validación).
-- **Próximo hito:** reunión de socios del **domingo 15 de noviembre de 2026, 18:00**. Agenda y resultados esperados en `docs/anteproyecto-v2.md`, sección 18.
+- **Próximo hito:** que los tres revisen el sitio de ejemplo y registren en `docs/decisiones.md` los temas de la lista «Por registrar». (La reunión presencial del domingo 15 de noviembre no se hizo; se reemplazó por el documento compartido, con plazo hasta el 16.)
+- **Por registrar (los tres deben confirmar; hasta entonces es propuesta):**
+  1. Nombre comercial **JJG Car Service** y descriptor «Mantención y servicio automotriz».
+  2. Identidad «Marca de torque»: logo, paleta grafito #25272D, violeta #59416F, naranja #E98232, aluminio #AEB4BC, blanco humo #F5F5F3; tipografías Chakra Petch e Inter. José pidió usarla al 100 % en la web (19 de nov).
+  3. Zona base Lo Prado / Estación Central y comunas que se atienden.
+  4. Medios de pago iniciales (efectivo y transferencia) y si hay anticipo.
+  5. Proceso de atención para la web: 3 pasos en el sitio de ejemplo, frente a 6, 9 y 14 en otros documentos.
+  6. Responsable de la coordinación de clientes (José, según el pedido del 19 de nov; el rol sigue «propuesto»).
+  7. Servicios iniciales aprobados por Gustavo por escrito.
+  8. Si se publican nombres y fotos del equipo.
+  9. Tecnología del sitio (Astro o HTML a mano), dominio y analítica.
+- **Por actualizar cuando se registre lo anterior:** la sección 6 de este archivo, `assets/estilos.css`, `docs/prompt-maestro.md`, la web de pre-lanzamiento (`web/pre-lanzamiento/`) y la maqueta (`web/maqueta/`), que siguen con la paleta anterior y «[Nombre por definir]»; los wireframes de Claude Design (quedaron como referencia anterior al sitio de ejemplo); y los datos ficticios del sitio de ejemplo, que se reemplazan por los reales o por «Por definir» antes de cualquier publicación.
 - **Hecho:**
   - Sitio estático de solo lectura del anteproyecto v2 (raíz del repositorio), para la reunión.
   - Publicado como página de Claude: https://claude.ai/artifact/KuwZubRshgu3fzhBAeABRq. **Al 18 de nov de 2026 sigue pública** (cualquiera con el link). José pidió dejarla privada y debe cambiarlo él desde Compartir; no se ha confirmado. La versión publicada **no** incluye la sección 13 ni las respuestas.
@@ -71,6 +82,10 @@ Si dos fuentes se contradicen, **no lo resuelvas tú**: anota la contradicción 
 
 ## 6. Identidad visual (propuesta, a validar entre los tres)
 
+**Identidad nueva en uso para la web de JJG Car Service (19 de nov de 2026, pendiente de registro):** «Marca de torque», en https://claude.ai/artifact/2HAMs4TUDxxN3wqGz3RtgR y el sistema de diseño https://claude.ai/artifact/H6oqxiC3DThBKM3XdNCUbR. Grafito #25272D (40 %), blanco humo #F5F5F3 (20 %), violeta #59416F (20 %), aluminio #AEB4BC (10 %), naranja #E98232 (10 %, solo CTA y marca de torque). Chakra Petch en títulos, Inter en texto. Radios de 4 a 6 px. No modificar el logo ni los colores. Se usa en `web/estrategia/` y `web/ejemplo-jjg/`.
+
+**Identidad anterior** (sitio de lectura, maqueta y pre-lanzamiento; se reemplaza cuando los tres registren la nueva):
+
 | Elemento | Valor usado en el sitio |
 | --- | --- |
 | Base | Negro carbón `#141417` |
@@ -84,7 +99,7 @@ Si dos fuentes se contradicen, **no lo resuelvas tú**: anota la contradicción 
 
 Las variables están en `assets/estilos.css`. Reutilízalas en todo entregable nuevo para que todo se vea como una sola marca.
 
-**Nombre comercial: pendiente.** Criterios: corto, fácil de decir por teléfono, disponible como dominio y en redes, que no limite el crecimiento, y sin marca igual registrada en INAPI (por verificar). Mientras no haya nombre, no inventes uno: usa «[Nombre por definir]».
+**Nombre comercial: JJG Car Service propuesto, pendiente de registro en `docs/decisiones.md`.** En entregables de JJG se usa ese nombre; en los documentos anteriores sigue «[Nombre por definir]» hasta el registro. Criterios que se pedían: corto, fácil de decir por teléfono, disponible como dominio y en redes, que no limite el crecimiento, y sin marca igual registrada en INAPI (por verificar). Mientras no haya nombre, no inventes uno: usa «[Nombre por definir]».
 
 ## 7. Hoja de ruta de entregables
 
@@ -146,6 +161,15 @@ Observaciones sobre las respuestas de Gustavo (18 de nov de 2026), sin resolver:
 
 19. Gustavo propone como ejemplo vender un kit de embrague en promoción. El v2 (sección 4.3) dice que los embragues se derivan a talleres colaboradores desde el inicio.
 
+Observaciones de la propuesta web JJG Car Service (19 de nov de 2026), sin resolver:
+
+20. Pasos del proceso: 6 en el v2 (web), 14 en el flujo de atención, 9 en el pedido de José del 19 de nov y 3 en el sitio de ejemplo.
+21. El mock de sitio del artefacto de identidad dice «Agenda tu mantención» (no hay agenda) y su informe incluye frenos (etapa 2).
+22. El pedido del 19 de nov da como hechos la zona base, los medios de pago y quién coordina; el v2 los deja por definir.
+23. El sitio de ejemplo muestra horario, precios «Desde $ 00.000», comunas, pago al terminar, reprogramación sin costo y los 6 servicios como si estuvieran decididos. Son datos ficticios para el equipo: no publicar así.
+24. Ley 21.719: las fuentes revisadas el 19 de nov no coinciden sobre el avance de la postergación (boletín 18.623-07) con lo que dice el v2.
+25. El texto oficial de la Ley 19.496 no se pudo leer en BCN desde este entorno; los arts. 40 y 41 se leyeron en copias. El umbral de presupuesto escrito no se confirmó.
+
 Temas del documento inicial que **no pasaron** al v2 (no recuperarlos sin decisión): modalidad de punto fijo (cochera o bodega por horas), convenios con oficinas y comunidades de edificios, franquicia o método replicable, lista de indicadores semanales, reparto de roles «cuerpo y cerebro» entre dos socios, y la administración del dinero asignada a José.
 
 ## 10. Mapa del repositorio
@@ -158,6 +182,7 @@ Temas del documento inicial que **no pasaron** al v2 (no recuperarlos sin decisi
 | `docs/respuestas-socios.md` | Copia en texto de las respuestas de los socios (la misma que `respuestas.html`) |
 | `docs/anteproyecto-v2.md` | Anteproyecto vigente |
 | `docs/documento-inicial.md` | Borrador inicial, solo referencia |
+| `web/estrategia/propuesta-sitio-jjg.md` | Propuesta estratégica y de diseño del sitio JJG Car Service |
 | `web/ejemplo-jjg/` | Sitio de ejemplo responsive JJG Car Service (datos ficticios) |
 | `marca/brief-diseno-web.md` | Recomendación de color, paletas y prompt para Claude Design |
 | `index.html` … `anexo.html` | Sitio de lectura (14 páginas: 13 secciones y el anexo) |
